@@ -238,18 +238,17 @@ body {
 
 .nav-categorias {
     display: flex;
+    flex-direction: row; /* Horizontal */
     gap: 0.5vh;
-    overflow-x: auto;
-    padding: 0 0.5vh;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    overflow-x: auto; /* Scroll horizontal se necessário */
+    overflow-y: hidden;
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    scrollbar-width: none; /* Firefox: esconde a barra */
+    -ms-overflow-style: none; /* IE/Edge: esconde a barra */
 }
 
 .nav-categorias::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome/Safari: esconde a barra */
 }
 
 .nav-categorias a {

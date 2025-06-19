@@ -52,6 +52,16 @@
             </div>
         </div>
 
+        <!-- Banner para Combos -->
+        <div class="banner" id="banner-combos" style="display: none;">
+            <img src="~/img/telainicialcombos.png" asp-append-version="true" alt="Banner Combos">
+            <div class="buttons">
+                <button class="button">
+                    <img class="img-menu-item" src="~/img/simbolo.jpg" asp-append-version="true" alt="Símbolo">
+                </button>
+            </div>
+        </div>
+
         <!-- Banner para Sobremesas -->
         <div class="banner" id="banner-sobremesas" style="display: none;">
             <img src="~/img/telainicialsobremesass.png" asp-append-version="true" alt="Banner Sobremesas">
@@ -108,7 +118,7 @@
                     <img class="img-menu-item" src="~/img/menuburguerimage.png" asp-append-version="true" alt="Lanches">
                     <div>Lanches</div>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="alternarConteudo('combos')">
                     <img class="img-menu-item" src="~/img/combos.png" asp-append-version="true" alt="Combos">
                     <div>Combos</div>
                 </div>
@@ -218,6 +228,11 @@
 
                         </div>
                     </div>
+                </div>
+
+                <!-- Conteúdo de Combos -->
+                <div id="conteudo-combos" style="display: none;">
+                    <partial name="combos" />
                 </div>
 
                 <!-- Conteúdo de Sobremesas -->
@@ -340,12 +355,14 @@
 function alternarConteudo(tipo) {
     // Esconde todos os conteúdos
     document.getElementById('conteudo-lanches').style.display = 'none';
+    document.getElementById('conteudo-combos').style.display = 'none';
     document.getElementById('conteudo-sobremesas').style.display = 'none';
     document.getElementById('conteudo-molhos').style.display = 'none';
     document.getElementById('conteudo-ofertas').style.display = 'none';
     document.getElementById('conteudo-bebidas').style.display = 'none';
     document.getElementById('conteudo-extras').style.display = 'none';
     document.getElementById('banner-lanches').style.display = 'none';
+    document.getElementById('banner-combos').style.display = 'none';
     document.getElementById('banner-sobremesas').style.display = 'none';
     document.getElementById('banner-molhos').style.display = 'none';
     document.getElementById('banner-ofertas').style.display = 'none';
@@ -364,11 +381,15 @@ function alternarConteudo(tipo) {
     // Adiciona a classe active ao item do menu clicado
     event.currentTarget.classList.add('active');
 
-    // Atualiza os filtros ativos
-    document.querySelectorAll('.nav-categorias a').forEach(link => {
-        link.classList.remove('active');
-    });
-    document.querySelector(`#conteudo-${tipo} .nav-categorias a:first-child`).classList.add('active');
+    // Atualiza os filtros ativos (apenas se houver nav-categorias no conteúdo)
+    var navCategorias = document.querySelector(`#conteudo-${tipo} .nav-categorias`);
+    if (navCategorias) {
+        navCategorias.querySelectorAll('a').forEach(link => {
+            link.classList.remove('active');
+        });
+        var firstLink = navCategorias.querySelector('a:first-child');
+        if (firstLink) firstLink.classList.add('active');
+    }
 }
 </script>
 </body>
