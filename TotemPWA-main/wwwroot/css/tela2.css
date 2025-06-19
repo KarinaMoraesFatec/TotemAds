@@ -83,6 +83,7 @@ body {
     flex-direction: column;
     width: 14.5vh;
     height: 100%;
+    max-height: 100vh;
     box-shadow: rgba(159, 159, 159, 0.2) 5px 0px 20px;
     background: rgb(255, 255, 254);
     padding: 1vh;
@@ -113,9 +114,11 @@ body {
 }
 
 .menu .menu-item {
-    height: 10vh;
-    min-height: 10vh;
-    padding: 0.5vh;
+    height: 11vh;
+    width: 11vh;
+    min-height: 11vh;
+    max-width: 11vh;
+    padding: 0.5dvh;
     margin-bottom: 1vh;
     text-align: center;
     cursor: pointer;
@@ -126,6 +129,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu .menu-item:last-child {
@@ -167,7 +172,7 @@ body {
 }
 
 .pedido-item {
-    height: 26vh;
+    height: 22vh;
     filter: drop-shadow(rgba(220, 220, 220, 0.25) 0px 9px 26.6px);
     overflow-wrap: break-word;
     hyphens: auto;
@@ -211,6 +216,7 @@ body {
     font-style: normal;
     font-weight: 100;
     margin-top: auto;
+    margin-bottom: 0.7vh;
 }
 
 .pedido-item:hover {
