@@ -75,9 +75,9 @@ body {
     transition: 0.1s ease;
 
     & .opcao-imagem {
-        width: 8vh;
+        width: 14vh;
         height: auto;
-        margin-top: 1vh; /* Adiciona margem superior */
+        margin-top: 2vh; /* Adiciona margem superior */
         display: block;
     }
     & .opcao-titulo {
