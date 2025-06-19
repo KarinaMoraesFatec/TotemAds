@@ -16,8 +16,8 @@
         .menu {
             height: calc(100vh - 200px); /* Adjust based on your banner and bottom bar height */
             overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #888 #f1f1f1;
+            scrollbar-width: 10px;
+            scrollbar-color: rgb(255, 255, 255) #ffffff;
         }
 
         .menu::-webkit-scrollbar {
@@ -25,18 +25,19 @@
         }
 
         .menu::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #ffffff;
             border-radius: 4px;
         }
 
         .menu::-webkit-scrollbar-thumb {
-            background: #888;
+            background: #ffffff !important;
             border-radius: 4px;
         }
 
-        .menu::-webkit-scrollbar-thumb:hover {
-            background: #555;
+       .menu::-webkit-scrollbar-thumb:hover {
+            background: #ffffff !important;
         }
+        
     </style>
 </head>
 <body>
@@ -47,9 +48,24 @@
             <img src="~/img/banner.jpg" asp-append-version="true" alt="Banner">
         </div>
 
+        <!-- Banner para Combos -->
+        <div class="banner" id="banner-combos" style="display: none;">
+            <img src="~/img/telainicialcombos.png" asp-append-version="true" alt="Banner Combos">
+            <div class="buttons">
+                <button class="button">
+                    <img class="img-menu-item" src="~/img/simbolo.jpg" asp-append-version="true" alt="Símbolo">
+                </button>
+            </div>
+        </div>
+
         <!-- Banner para Sobremesas -->
         <div class="banner" id="banner-sobremesas" style="display: none;">
             <img src="~/img/telainicialsobremesass.jpg" asp-append-version="true" alt="Banner Sobremesas">
+        </div>
+ 
+         <!-- Banner para Combos -->
+        <div class="banner" id="banner-combos" style="display: none;" >
+            <img src="~/img/telainicialcombos.png" asp-append-version="true" alt="Banner Combos">
         </div>
 
         <!-- Banner para Molhos -->
@@ -78,7 +94,7 @@
                     <img class="img-menu-item" src="~/img/menuburguerimage.png" asp-append-version="true" alt="Lanches">
                     <div>Lanches</div>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="alternarConteudo('combos')">
                     <img class="img-menu-item" src="~/img/combos.png" asp-append-version="true" alt="Combos">
                     <div>Combos</div>
                 </div>
@@ -131,10 +147,10 @@
                             </div>
 
                             <!-- Item 3 -->
-                            <div class="pedido-item" data-id="12" data-categoria="carne" data-descricao="Três hambúrgueres de costela 150g, queijo cheddar, cebola crispy, molho especial" onclick="abrirModalEditar(this)">
-                                <img class="pedido-imagem" src="~/img/loopingduplo.png" asp-append-version="true" alt="Looping Triplo">
-                                <h3 class="pedido-titulo">Looping Triplo</h3> 
-                                <h4 class="pedido-preco">R$ 32,90</h4>
+                            <div class="pedido-item" data-id="12" data-categoria="frango" data-descricao="Hambúrgueres de frango de 150g, alface e molho de alho" onclick="abrirModalEditar(this)">
+                                <img class="pedido-imagem" src="~/img/Looping.png" asp-append-version="true" alt="Looping Triplo">
+                                <h3 class="pedido-titulo">Looping Frango</h3> 
+                                <h4 class="pedido-preco">R$ 26,90</h4>
                             </div>
 
                             <!-- Item 4 -->
@@ -152,8 +168,8 @@
                             </div>
 
                             <!-- Item 6 -->
-                            <div class="pedido-item" data-id="15" data-categoria="carne" data-descricao="Pão de hambúrguer tradicional, hambúrguer de costela 180g, queijo prato, alface, tomate" onclick="abrirModalEditar(this)">
-                                <img class="pedido-imagem" src="~/img/backend.jpg" asp-append-version="true" alt="Backend">
+                            <div class="pedido-item" data-id="15" data-categoria="frango" data-descricao="Pão brioche, hambúrguer de frango 180g, queijo cheddar, alface, cebola" onclick="abrirModalEditar(this)">
+                                <img class="pedido-imagem" src="~/img/backend.png" asp-append-version="true" alt="Backend">
                                 <h3 class="pedido-titulo">Backend</h3> 
                                 <h4 class="pedido-preco">R$ 22,90</h4>
                             </div>
@@ -190,6 +206,11 @@
                     </div>
                 </div>
 
+                <!-- Conteúdo de Combos -->
+                <div id="conteudo-combos" style="display: none;">
+                    <partial name="combos" />
+                </div>
+
                 <!-- Conteúdo de Sobremesas -->
                 <div id="conteudo-sobremesas" style="display: none;">
                     <partial name="sobremesa" />
@@ -208,6 +229,11 @@
                 <!-- Conteúdo de Extras -->
                 <div id="conteudo-extras" style="display: none;">
                     <partial name="extras" />
+                </div>
+
+                <!-- Conteúdo de Combos -->
+                <div id="conteudo-combos" style="display: none;">
+                    <partial name="combos" />
                 </div>
 
                 <!-- Conteúdo de Bebidas -->
@@ -310,6 +336,7 @@
 function alternarConteudo(tipo) {
     // Esconde todos os conteúdos
     document.getElementById('conteudo-lanches').style.display = 'none';
+    document.getElementById('conteudo-combos').style.display = 'none';
     document.getElementById('conteudo-sobremesas').style.display = 'none';
     document.getElementById('conteudo-molhos').style.display = 'none';
     document.getElementById('conteudo-ofertas').style.display = 'none';
@@ -317,6 +344,7 @@ function alternarConteudo(tipo) {
     document.getElementById('conteudo-extras').style.display = 'none';
     document.getElementById('conteudo-combos').style.display = 'none';
     document.getElementById('banner-lanches').style.display = 'none';
+    document.getElementById('banner-combos').style.display = 'none';
     document.getElementById('banner-sobremesas').style.display = 'none';
     document.getElementById('banner-molhos').style.display = 'none';
     document.getElementById('banner-ofertas').style.display = 'none';
@@ -336,11 +364,15 @@ function alternarConteudo(tipo) {
     // Adiciona a classe active ao item do menu clicado
     event.currentTarget.classList.add('active');
 
-    // Atualiza os filtros ativos
-    document.querySelectorAll('.nav-categorias a').forEach(link => {
-        link.classList.remove('active');
-    });
-    document.querySelector(`#conteudo-${tipo} .nav-categorias a:first-child`).classList.add('active');
+    // Atualiza os filtros ativos (apenas se houver nav-categorias no conteúdo)
+    var navCategorias = document.querySelector(`#conteudo-${tipo} .nav-categorias`);
+    if (navCategorias) {
+        navCategorias.querySelectorAll('a').forEach(link => {
+            link.classList.remove('active');
+        });
+        var firstLink = navCategorias.querySelector('a:first-child');
+        if (firstLink) firstLink.classList.add('active');
+    }
 }
 </script>
 </body>
