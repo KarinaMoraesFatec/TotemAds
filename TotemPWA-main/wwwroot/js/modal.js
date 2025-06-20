@@ -62,11 +62,12 @@ function atualizarCarrinho() {
                     </div>
                 </div>
                 <div class="controles-item">
-                    <button class="botao-remove" onclick="removerItemCarrinho(${item.id})">-</button>
-                    <span class="quantidade-item">${item.quantidade}x</span>
-                    <button class="botao-adiciona" onclick="adicionarItemCarrinho(${item.id})">+</button>
+                    <button class="botao-remove" onclick="removerItemCarrinho(${item.id})"><h2 class="dell">-</h2></button>
+                    <span class="quantidade-item"><h2 class="TituloCarrinho">${item.quantidade}x</h2></span>
+                    <button class="botao-adiciona" onclick="adicionarItemCarrinho(${item.id})"><h2 class="add">+</h2></button>
                     <button class="btn-remover-carrinho" onclick="removerTodoItem(${item.id})">
-                     <a>X</a>
+                     <h2 class="X">x</h2>
+                     
                     </button>
                 </div>
             </div>

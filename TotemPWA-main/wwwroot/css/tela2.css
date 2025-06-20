@@ -450,16 +450,19 @@ body {
     position: absolute;
     top: 1.5vh;
     right: 1.5vh;
-    font-size: 4vh;
+    font-size: 5vh;
     color: #3a3a3a;
     cursor: pointer;
     background: none;
     border: none;
     font-weight: 400;
+    margin: 0vh 1vh 0vh 1vh;
 }
 
 .fechar-modal:hover {
     color: rgb(255, 56, 56);
+    transition: 0.2s;
+
 }
 
 .carrinho-vazio {
@@ -476,6 +479,11 @@ body {
 .carrinho-texto {
     font-size: 2vh;
     color: #e41c1c;
+    font-weight: 400;
+}
+.TituloCarrinho{
+    font-size: 3vh;
+    color: #555555;
     font-weight: 400;
 }
 
@@ -517,8 +525,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5vh;
-    margin-bottom: 1vh;
-    background-color: #f9f9f9;
+    margin: 2vh 1vh 2vh 1vh;
+    background-color: #ffffff;
     border-radius: 1vh;
     box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, 0.1);
 }
@@ -554,8 +562,8 @@ body {
 }
 
 .botao-remove, .botao-adiciona {
-    width: 3vh;
-    height: 3vh;
+    width: 5vh;
+    height: 5vh;
     background-color: #f0f0f0;
     border: none;
     border-radius: 50%;
@@ -579,6 +587,17 @@ body {
     cursor: pointer;
     transition: opacity 0.3s;
 }
+.add, .dell{
+    font-size: 3vh;
+    color: rgb(124, 124, 124);
+    font-family: 'Tilt Warp', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 0.8vh;
+}
 
 .icone-lixeira:hover {
     opacity: 0.7;
@@ -586,7 +605,7 @@ body {
 
 /* Estilo para o botão de remover do carrinho */
 .btn-remover-carrinho {
-    background-color: #c00000;
+    background-color: #f84545;
     width: 6vh;
     height: 6vh;
     border: none;
@@ -596,6 +615,18 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+}
+.X{
+    font-size:3vh;
+    color: white;
+    font-family: 'Tilt Warp', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 0.8vh;
+
 }
 
 .btn-remover-carrinho img {
