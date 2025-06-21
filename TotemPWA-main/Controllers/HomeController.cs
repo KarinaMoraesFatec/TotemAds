@@ -43,7 +43,20 @@ public class HomeController : Controller
     return View();
     }
 
+    public IActionResult Cartao()
+    {
+    return View();
+    }
 
+    public IActionResult Pix()
+    {
+    return View();
+    }
+
+    public IActionResult Dinheiro()
+    {
+    return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

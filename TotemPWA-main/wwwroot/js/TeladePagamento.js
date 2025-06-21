@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona os elementos se existirem
     const cartaoDiv = document.querySelector('.cartao');
     const pixDiv = document.querySelector('.pix');
     const dinheiroDiv = document.querySelector('.dinheiro');
 
-    const opcoes = [cartaoDiv, pixDiv, dinheiroDiv];
+    // Agrupa os que existem
+    const opcoes = [cartaoDiv, pixDiv, dinheiroDiv].filter(Boolean);
 
+    // Aplica o destaque visual (classe .selected)
     function selecionarOpcao(opcaoSelecionada) {
         opcoes.forEach(opcao => {
             if (opcao === opcaoSelecionada) {
@@ -15,18 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    cartaoDiv.addEventListener('click', () => {
-        selecionarOpcao(cartaoDiv);
-        window.location.href = 'cartao.cshtml'; // substitua pelo caminho correto
-    });
-
-    pixDiv.addEventListener('click', () => {
-        selecionarOpcao(pixDiv);
-        window.location.href = 'pix.cshtml'; // substitua pelo caminho correto
-    });
-
-    dinheiroDiv.addEventListener('click', () => {
-        selecionarOpcao(dinheiroDiv);
-        window.location.href = 'dinheiro.cshtml'; // substitua pelo caminho correto
+    // Adiciona evento a cada opção existente
+    opcoes.forEach(opcao => {
+        opcao.addEventListener('click', () => {
+            selecionarOpcao(opcao);
+            // O redirecionamento é feito no HTML com onclick
+        });
     });
 });
