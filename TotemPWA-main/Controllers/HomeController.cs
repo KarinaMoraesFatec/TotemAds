@@ -62,13 +62,24 @@ public class HomeController : Controller
     {
     return View();
     }
-
-    public IActionResult Concluido()
+    
+    public IActionResult Credito()
     {
     return View();
     }
 
-     public IActionResult Negado()
+
+    public IActionResult Concluido()
+    {
+        return View();
+    }
+
+    public IActionResult Negado()
+    {
+    return View();
+    }
+
+    public IActionResult Senha()
     {
     return View();
     }
