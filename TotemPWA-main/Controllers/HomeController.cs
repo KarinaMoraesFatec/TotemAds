@@ -58,6 +58,16 @@ public class HomeController : Controller
     return View();
     }
 
+    public IActionResult Debito()
+    {
+    return View();
+    }
+
+    public IActionResult Concluido()
+    {
+    return View();
+    }
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

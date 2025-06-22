@@ -1,12 +1,12 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
-    <link rel="stylesheet" href="~/css/concluido.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/cartao.css" asp-append-version="true">
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,25 +14,22 @@
         <div class="c1">
             <div class="content">
                 <div class="conteiner">
-                    <a class="title">Pagamento Concluído!</a>
+                    <a class="title">Aproxime ou insira o cartão</a>
                     <div class="opcao-grid">
                         <div class="top-icon">
-                            <img src="~/img/concluido.png" asp-append-version="true" alt="Cartões" class="img-cartoes">
+                            <img src="~/img/aproximacao.png" asp-append-version="true" alt="Cartões" class="img-cartoes">
                         </div>
                     </div>
-                </div>
-                <div class="conteiner">
-                    <a class="title">Aguarde seu pedido ficar pronto!</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Aguarda 3 segundos e redireciona para a tela inicial (Index da HomeController)
+        // Após 4 segundos, redireciona para a tela "Pagamento Concluído"
         setTimeout(() => {
-            window.location.href = '@Url.Action("Index", "Home")';
-        }, 5000);
+            window.location.href = '@Url.Action("Concluido", "Home")';
+        }, 4000);
     </script>
 </body>
 </html>
