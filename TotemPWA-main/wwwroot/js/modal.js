@@ -12,9 +12,9 @@ function salvarCarrinho() {
 function abrirModalCarrinho() {
     const modal = document.getElementById('modalCarrinho');
     if (modal) {
-        modal.classList.add('active'); // Adiciona a classe 'active' para exibir o modal
+        modal.classList.add('active');
         atualizarCarrinho();
-        document.body.style.overflow = 'hidden'; // Impede scroll da página
+        document.body.style.overflow = 'hidden';
     }
 }
 
@@ -22,18 +22,31 @@ function abrirModalCarrinho() {
 function fecharModalCarrinho() {
     const modal = document.getElementById('modalCarrinho');
     if (modal) {
-        modal.classList.remove('active'); // Remove a classe 'active' para ocultar o modal
-        document.body.style.overflow = 'auto'; // Restaura scroll da página
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
     }
 }
 
-// Função para atualizar a exibição do carrinho (estilizada)
+// ✅ Atualiza o botão "Finalizar"
+function atualizarBotaoFinalizar() {
+    const botao = document.getElementById("prosseguir");
+    if (!botao) return;
+
+    if (carrinhoItens.length > 0) {
+        botao.classList.remove("disabled");
+        botao.setAttribute("href", "/Home/TeladePagamento");
+    } else {
+        botao.classList.add("disabled");
+        botao.setAttribute("href", "#");
+    }
+}
+
+// Função para atualizar a exibição do carrinho
 function atualizarCarrinho() {
     const carrinhoContainer = document.querySelector('.modal-content .modal-grid');
     const totalElement = document.querySelector('.barra-inferior .preco span');
     const carrinhoVazio = document.querySelector('.carrinho-vazio');
 
-    // Verifica se o carrinho está vazio
     if (!carrinhoItens || carrinhoItens.length === 0) {
         if (carrinhoContainer) {
             carrinhoContainer.innerHTML = `
@@ -43,13 +56,13 @@ function atualizarCarrinho() {
             `;
         }
         if (totalElement) totalElement.textContent = 'R$ 0,00';
+        atualizarBotaoFinalizar();
         return;
     }
 
-    // Se há itens no carrinho, atualiza a lista
     let total = 0;
     let htmlItens = '';
-    
+
     carrinhoItens.forEach(item => {
         total += item.preco * item.quantidade;
         htmlItens += `
@@ -66,127 +79,115 @@ function atualizarCarrinho() {
                     <span class="quantidade-item"><h2 class="TituloCarrinho">${item.quantidade}x</h2></span>
                     <button class="botao-adiciona" onclick="adicionarItemCarrinho(${item.id})"><h2 class="add">+</h2></button>
                     <button class="btn-remover-carrinho" onclick="removerTodoItem(${item.id})">
-                     <h2 class="X">x</h2>
-                     
+                        <h2 class="X">x</h2>
                     </button>
                 </div>
             </div>
         `;
     });
-    
-    // Atualiza a interface
+
     if (carrinhoContainer) carrinhoContainer.innerHTML = htmlItens;
     if (totalElement) totalElement.textContent = `R$ ${total.toFixed(2)}`;
     if (carrinhoVazio) carrinhoVazio.style.display = 'none';
 
-    // Salva as alterações
     salvarCarrinho();
+    atualizarBotaoFinalizar();
 }
 
-// Função para adicionar item ao carrinho
+// Adicionar item ao carrinho
 function adicionarAoCarrinho(id, nome, preco, imagem) {
-    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || []; // Sincronizar estado com localStorage
+    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     const itemExistente = carrinhoItens.find(item => item.id === id);
 
     if (itemExistente) {
         itemExistente.quantidade += 1;
     } else {
-        carrinhoItens.push({
-            id,
-            nome,
-            preco,
-            imagem,
-            quantidade: 1
-        });
+        carrinhoItens.push({ id, nome, preco, imagem, quantidade: 1 });
     }
 
-    salvarCarrinho(); // Salvar o estado atualizado no localStorage
+    salvarCarrinho();
     atualizarCarrinho();
 }
 
-// Função para adicionar quantidade de um item
+// Adicionar quantidade
 function adicionarItemCarrinho(id) {
-    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || []; // Sincronizar estado com localStorage
+    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     const item = carrinhoItens.find(item => item.id === id);
     if (item) {
         item.quantidade += 1;
-        salvarCarrinho(); // Salvar o estado atualizado no localStorage
+        salvarCarrinho();
         atualizarCarrinho();
     }
 }
 
-// Função para remover quantidade de um item
+// Remover quantidade
 function removerItemCarrinho(id) {
-    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || []; // Sincronizar estado com localStorage
+    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     const itemIndex = carrinhoItens.findIndex(item => item.id === id);
 
     if (itemIndex !== -1) {
         if (carrinhoItens[itemIndex].quantidade > 1) {
             carrinhoItens[itemIndex].quantidade -= 1;
         } else {
-            carrinhoItens.splice(itemIndex, 1); // Remover o item completamente se a quantidade for 0
+            carrinhoItens.splice(itemIndex, 1);
         }
-        salvarCarrinho(); // Salvar o estado atualizado no localStorage
+        salvarCarrinho();
         atualizarCarrinho();
     }
 }
 
-// Função para remover completamente um item
+// Remover item completo
 function removerTodoItem(id) {
-    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || []; // Sincronizar estado com localStorage
+    carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     carrinhoItens = carrinhoItens.filter(item => item.id !== id);
-    salvarCarrinho(); // Salvar o estado atualizado no localStorage
+    salvarCarrinho();
     atualizarCarrinho();
 }
 
-// Função para limpar todo o carrinho
+// Limpar carrinho
 function limparCarrinho() {
     carrinhoItens = [];
     atualizarCarrinho();
     localStorage.removeItem('carrinhoItens');
 }
 
-// Configuração dos eventos quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', function() {
-    // Limpar o carrinho ao iniciar o sistema
+// DOM carregado
+document.addEventListener('DOMContentLoaded', function () {
     localStorage.removeItem('carrinhoItens');
-    carrinhoItens = []; // Garantir que a variável global também esteja vazia
+    carrinhoItens = [];
 
-    // Fechar modal quando clicar no X
     const fecharBtn = document.querySelector('.fechar-modal');
     if (fecharBtn) {
         fecharBtn.addEventListener('click', fecharModalCarrinho);
     }
-    
-    // Fechar modal quando clicar fora da área de conteúdo
+
     const modal = document.getElementById('modalCarrinho');
     if (modal) {
-        modal.addEventListener('click', function(e) {
+        modal.addEventListener('click', function (e) {
             if (e.target === modal) {
                 fecharModalCarrinho();
             }
         });
     }
-    
-    // Remover qualquer lógica que adicione itens ao carrinho ao clicar nos itens do menu
+
     document.querySelectorAll('.pedido-item').forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const id = parseInt(this.getAttribute('data-id'));
-            abrirModalEditar(this); // Apenas abrir o modal de edição
+            abrirModalEditar(this);
         });
     });
 
-    // Atualiza o carrinho ao carregar a página
     atualizarCarrinho();
+    atualizarBotaoFinalizar();
 });
 
-// Listener para atualizar o carrinho quando um item for editado
-window.addEventListener('atualizarCarrinho', function() {
+// Atualizar carrinho externamente
+window.addEventListener('atualizarCarrinho', function () {
     carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     atualizarCarrinho();
 });
 
-// Expor funções para o escopo global
+// Expor para escopo global
 window.abrirModalCarrinho = abrirModalCarrinho;
 window.fecharModalCarrinho = fecharModalCarrinho;
 window.adicionarAoCarrinho = adicionarAoCarrinho;

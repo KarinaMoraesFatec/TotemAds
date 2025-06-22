@@ -131,3 +131,40 @@ body {
         }
     }
 }
+
+.codigo-container {
+    background-color: #f7f7f7;
+    border: 0.4vh dashed #414141;
+    border-radius: 1.5vh;
+    padding: 2vh;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #414141;
+    font-family: 'Tilt Warp', sans-serif;
+    text-align: center;
+}
+
+.btnOk {
+    width: 20vh;
+    height: 4.4vh;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    border-radius: 1.5vh;
+    border: 0.5vh solid #9FD942;
+    background-color: #9FD942;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tilt Warp', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.btnOk:hover {
+    background-color: #86c634;
+}

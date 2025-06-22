@@ -940,4 +940,17 @@ body {
 }
 
 
+#prosseguir.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: #ccc;
+    color: #888;
+    border: 0.5vh solid #ccc;
+}
+
+a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 

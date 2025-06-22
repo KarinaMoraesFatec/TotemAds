@@ -16,15 +16,26 @@
                     <img src="~/img/dinheiro.png" alt="Dinheiro" class="img-cartoes" asp-append-version="true">
                 </div>
                 <div class="conteiner">
-                    <a class="title">Apresente a nota fiscal ao caixa para concluir o pagamento em dinheiro!</a>
+                    <a class="title">Apresente este código no balcão para concluir o pagamento em dinheiro:</a>
                     <div class="opcao-grid">
-                        <!-- Espaço reservado, caso queira adicionar algo aqui futuramente -->
+                        <div class="codigo-container">
+                            <span id="codigoPagamento" class="codigo-pagamento">Gerando...</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+         <!-- Botão OK -->
+        <div class="ConteinerBtn">
+            <div class="NavBtn">
+                <a href="@Url.Action("Index", "Home")" class="btnOk">OK</a>
+            </div>
+        </div>
+    
     </div>
 
-    <script src="~/js/TeladePagamento.js" asp-append-version="true"></script>
+    <script src="~/js/Dinheiro.js" asp-append-version="true"></script>
 </body>
 </html>
+
