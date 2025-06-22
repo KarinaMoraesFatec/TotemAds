@@ -1,6 +1,8 @@
 <!-- Apenas o conteúdo dos combos, sem <html>, <head>, <body>, banners ou menu lateral -->
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <div class="container-categoria">
     <div class="nav-categorias">
+        <a href="#" class="todos" data-categoria="todos">Todos</a>
         <a href="#" class="active" data-categoria="simples">Simples</a>
         <a href="#" data-categoria="casal">Casal</a>
         <a href="#" data-categoria="familia">Familia</a>
@@ -8,7 +10,7 @@
 </div>
 <div class="pedido">
     <div class="pedido-grid">
-        <div class="pedido-item" data-categoria="simples">
+        <div class="pedido-item" data-categoria="simples" >
             <img class="pedido-imagem" src="~/img/1.png" asp-append-version="true" alt="Combo 1">
             <h3 class="pedido-titulo">Combo 1</h3> 
             <h4 class="pedido-preco">R$ 54,90</h4>
