@@ -48,7 +48,7 @@ function inicializarFiltros(secao) {
 // Adiciona os event listeners para os links de categoria
 document.addEventListener('DOMContentLoaded', function() {
     // Configura os filtros para cada seção
-    const secoes = ['lanches', 'sobremesas', 'molhos', 'ofertas', 'bebidas'];
+    const secoes = ['lanches', 'sobremesas', 'molhos', 'ofertas', 'bebidas', 'combos'];
     
     // Inicializa os filtros para cada seção
     secoes.forEach(secao => {

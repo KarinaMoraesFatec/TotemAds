@@ -91,12 +91,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // ... mantenha os outros lanches conforme necessário ...
         11: [ // Full Stack
             { nome: 'Pão brioche', quantidade: 1, preco: 1.00 },
-            { nome: 'Queijo prato', quantidade: 1, preco: 1.50 },
-            { nome: 'Hambúrguer de costela', quantidade: 1, preco: 5.00 },
-            { nome: 'Bacon', quantidade: 1, preco: 2.00 },
-            { nome: 'Cebola caramelizada', quantidade: 1, preco: 0.50 }
+            { nome: 'Molho de alho', quantidade: 1, preco: 1.50 },
+            { nome: 'Hambúrguer de frango', quantidade: 1, preco: 5.00 },
+           
         ],
-        12: [ // Looping Triplo
+        12: [ // Looping Frango
             { nome: 'Pão de gergelim', quantidade: 1, preco: 0.50 },
             { nome: 'Queijo cheddar', quantidade: 3, preco: 1.50 },
             { nome: 'Hambúrguer de costela', quantidade: 3, preco: 7.50 },

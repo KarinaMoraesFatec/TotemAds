@@ -84,6 +84,16 @@ public class HomeController : Controller
     return View();
     }
 
+    public IActionResult Combo()
+    {
+    return View();
+    }
+
+    public IActionResult RevisarPedido()
+    {
+    return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
