@@ -80,6 +80,12 @@ body {
         margin-top: 2vh; /* Adiciona margem superior */
         display: block;
     }
+    & .opcao-imagem1{
+        width: 14vh;
+        height: auto;
+        margin-top: 3.4vh; /* Adiciona margem superior */
+        display: block;
+    }
     & .opcao-titulo {
         color: #414141;
         font-weight: 400;
