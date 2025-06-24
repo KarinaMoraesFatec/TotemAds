@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cpfInput = document.getElementById("cpfInput");
     const proceedButton = document.getElementById("proceedButton");
 
-    // Cria o elemento da mensagem de erro
     const erroMsg = document.createElement("p");
     erroMsg.id = "cpfError";
     erroMsg.style.color = "red";
@@ -12,19 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
     cpfInput.addEventListener("input", () => {
         let cpf = cpfInput.value.replace(/\D/g, "");
 
-        // Limita a 11 dígitos
         if (cpf.length > 11) {
             cpf = cpf.slice(0, 11);
         }
 
-        // Aplica máscara: 000.000.000-00
         let cpfFormatado = cpf;
         cpfFormatado = cpfFormatado.replace(/(\d{3})(\d)/, "$1.$2");
         cpfFormatado = cpfFormatado.replace(/(\d{3})(\d)/, "$1.$2");
         cpfFormatado = cpfFormatado.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
         cpfInput.value = cpfFormatado;
 
-        // Verifica se o CPF é válido
         if (cpf.length === 11) {
             if (validarCPF(cpf)) {
                 proceedButton.style.display = "block";
@@ -39,9 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Função para validar CPF com base no cálculo oficial
     function validarCPF(cpf) {
-        if (/^(\d)\1+$/.test(cpf)) return false; // Verifica se todos os dígitos são iguais
+        if (/^(\d)\1+$/.test(cpf)) return false;
 
         let soma = 0;
         for (let i = 0; i < 9; i++) {
@@ -60,4 +55,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return resto === parseInt(cpf.charAt(10));
     }
+
+    // TECLADO VIRTUAL
+    document.querySelectorAll('.tecla').forEach(botao => {
+        botao.addEventListener('click', () => {
+            const valor = botao.textContent;
+            let cpf = cpfInput.value.replace(/\D/g, "");
+
+            if (valor === "←") {
+                cpf = cpf.slice(0, -1);
+            } else if (valor === "Limpar") {
+                cpf = "";
+            } else if (cpf.length < 11 && !isNaN(valor)) {
+                cpf += valor;
+            }
+
+            let cpfFormatado = cpf;
+            cpfFormatado = cpfFormatado.replace(/(\d{3})(\d)/, "$1.$2");
+            cpfFormatado = cpfFormatado.replace(/(\d{3})(\d)/, "$1.$2");
+            cpfFormatado = cpfFormatado.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            cpfInput.value = cpfFormatado;
+
+            cpfInput.dispatchEvent(new Event("input"));
+        });
+    });
 });
