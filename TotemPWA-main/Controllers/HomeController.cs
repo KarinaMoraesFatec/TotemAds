@@ -89,9 +89,13 @@ public class HomeController : Controller
     return View();
     }
 
-    public IActionResult RevisarPedido()
+    public IActionResult Cupons()
     {
     return View();
+    }
+    public IActionResult RevisarPedido()
+    {
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

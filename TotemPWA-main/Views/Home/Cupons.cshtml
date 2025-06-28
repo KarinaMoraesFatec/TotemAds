@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inserir Cupom</title>
+    <link rel="stylesheet" href="~/css/Cupons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="main">
+        <div class="c1">
+            <div class="content">
+                <div class="conteiner">
+                    <a class="title">Vamos adicionar este Cupom!</a>
+                    <div class="opcao-grid">    
+                        <div class="comer-aqui">
+                            <input class="inputCupom" type="text" id="cupomInput" placeholder="Digite seu CUPOM" maxlength="8"> 
+                        </div>
+                    </div>
+
+                    <!-- TECLADO VIRTUAL CUPOM -->
+                    <div id="tecladoVirtual" class="teclado">
+                        <div class="linha-teclas">
+                            <button class="tecla">1</button>
+                            <button class="tecla">2</button>
+                            <button class="tecla">3</button>
+                            <button class="tecla">A</button>
+                            <button class="tecla">B</button>
+                            <button class="tecla">C</button>
+                        </div>
+                        <div class="linha-teclas">
+                            <button class="tecla">4</button>
+                            <button class="tecla">5</button>
+                            <button class="tecla">6</button>
+                            <button class="tecla">D</button>
+                            <button class="tecla">E</button>
+                            <button class="tecla">F</button>
+                        </div>
+                        <div class="linha-teclas">
+                            <button class="tecla">7</button>
+                            <button class="tecla">8</button>
+                            <button class="tecla">9</button>
+                            <button class="tecla">G</button>
+                            <button class="tecla">H</button>
+                            <button class="tecla">I</button>
+                        </div>
+                        <div class="linha-teclas">
+                            <button class="tecla limpar">🗑️</button>
+                            <button class="tecla">J</button>
+                            <button class="tecla">0</button>
+                            <button class="tecla">K</button>
+                            <button class="tecla apagar">←</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ConteinerBtn">
+            <div class="NavBtn">
+                <a id="cancelar" href="@Url.Action("RevisarPedido", "Home")">Cancelar</a>
+                <a class="btnProsseguir" id="proceedButton" href="@Url.Action("RevisarPedido", "Home")" style="display: none;">Aplicar Cupom</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/Cupons.js"></script>
 </body>
 </html>
