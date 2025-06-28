@@ -34,7 +34,7 @@ function atualizarBotaoFinalizar() {
 
     if (carrinhoItens.length > 0) {
         botao.classList.remove("disabled");
-        botao.setAttribute("href", "/Home/TeladePagamento");
+        botao.setAttribute("href", "/Home/RevisarPedido");
     } else {
         botao.classList.add("disabled");
         botao.setAttribute("href", "#");
@@ -95,14 +95,14 @@ function atualizarCarrinho() {
 }
 
 // Adicionar item ao carrinho
-function adicionarAoCarrinho(id, nome, preco, imagem) {
+function adicionarAoCarrinho(id, nome, preco, imagem, descricao) {
     carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     const itemExistente = carrinhoItens.find(item => item.id === id);
 
     if (itemExistente) {
         itemExistente.quantidade += 1;
     } else {
-        carrinhoItens.push({ id, nome, preco, imagem, quantidade: 1 });
+        carrinhoItens.push({ id, nome, preco, imagem, descricao, quantidade: 1 });
     }
 
     salvarCarrinho();
