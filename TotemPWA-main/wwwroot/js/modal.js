@@ -95,14 +95,14 @@ function atualizarCarrinho() {
 }
 
 // Adicionar item ao carrinho
-function adicionarAoCarrinho(id, nome, preco, imagem, descricao) {
+function adicionarAoCarrinho(id, nome, preco, imagem) {
     carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     const itemExistente = carrinhoItens.find(item => item.id === id);
 
     if (itemExistente) {
         itemExistente.quantidade += 1;
     } else {
-        carrinhoItens.push({ id, nome, preco, imagem, descricao, quantidade: 1 });
+        carrinhoItens.push({ id, nome, preco, imagem, quantidade: 1 });
     }
 
     salvarCarrinho();

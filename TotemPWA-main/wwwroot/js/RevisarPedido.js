@@ -13,18 +13,34 @@ function renderizarLanchesRevisao() {
         div.className = `C${idx + 1}`;
         div.style.cursor = 'pointer';
 
-        // Adiciona imagem, nome, quantidade e descrição
+        // Layout flex para alinhar conteúdo e botão excluir na lateral
         div.innerHTML = `
-            <img class="opcao-imagem" src="${item.imagem}" alt="${item.nome}">
-            <h3 class="opcao-titulo">${item.nome} <span style="font-weight:normal;">x${item.quantidade}</span></h3>
-            <p class="opcao-descricao" style="font-size:1.7vh; color:#555; text-align:center;">${item.descricao || ''}</p>
+            <div style="display: flex; align-items: center; width: 100%; height: 100%;">
+                <div class="c1" >
+                    <img class="opcao-imagem" src="${item.imagem}" alt="${item.nome}">
+                    <h3 class="opcao-titulo">${item.nome} <span style="font-weight:normal;">x${item.quantidade}</span></h3>
+                    <p class="opcao-descricao" style="font-size:1.7vh; color:#555; text-align:center;">${item.descricao || ''}</p>
+                </div>
+                <button class="btn-excluir-revisao">Excluir</button>
+            </div>
         `;
 
-        // Opcional: clique para editar/remover (adicione lógica se desejar)
-        // div.onclick = function() { /* abrir modal de edição/remover */ };
+        // Botão excluir funcional
+        div.querySelector('.btn-excluir-revisao').onclick = function(e) {
+            e.stopPropagation();
+            removerItemRevisao(item.id);
+        };
 
         grid.appendChild(div);
     });
+}
+
+// Função para remover item do carrinho e atualizar a tela
+function removerItemRevisao(id) {
+    let carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
+    carrinhoItens = carrinhoItens.filter(item => item.id !== id);
+    localStorage.setItem('carrinhoItens', JSON.stringify(carrinhoItens));
+    renderizarLanchesRevisao();
 }
 
 // Executa ao carregar a página RevisarPedido
