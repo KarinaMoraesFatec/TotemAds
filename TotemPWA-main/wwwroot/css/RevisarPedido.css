@@ -33,7 +33,7 @@ body {
     overflow-y: hidden;
 
     & .title {
-        padding: 18vh 0vh 10vh 0vh;
+        padding: 13.5vh 0vh 10vh 0vh;
         color: #414141;
         text-align: center;
         font-size: 2.5vh;
@@ -177,4 +177,31 @@ body {
     border: none;
     margin-right: 1vh;
     font-family: 'Tilt Warp', sans-serif;
+}
+.cupom{
+        width: 90%;
+        height: 4.4vh;
+        margin: 1vh auto;
+        margin-bottom: 2vh;
+        color: #ffffff;
+        text-align: center;
+        font-size: 2vh;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        border-radius: 1.5vh;
+        border: 0.5vh solid #a3e43b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #a3e43b;
+}
+
+.divcupom{
+        width: 100%;
+        margin-bottom: 1.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
