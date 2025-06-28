@@ -41,6 +41,11 @@ function removerItemRevisao(id) {
     carrinhoItens = carrinhoItens.filter(item => item.id !== id);
     localStorage.setItem('carrinhoItens', JSON.stringify(carrinhoItens));
     renderizarLanchesRevisao();
+
+    // Se o carrinho ficou vazio, redireciona para tela2
+    if (carrinhoItens.length === 0) {
+        window.location.href = '/Home/Tela2';
+    }
 }
 
 // Executa ao carregar a página RevisarPedido
