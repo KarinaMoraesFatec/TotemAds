@@ -33,7 +33,7 @@ body {
     overflow-y: hidden;
 
     & .title {
-        padding: 18vh 0vh 10vh 0vh;
+        padding: 12vh 0vh 10vh 0vh;
         color: #414141;
         text-align: center;
         font-size: 2.5vh;
@@ -57,7 +57,7 @@ body {
     justify-content: center; /* Centraliza os itens horizontalmente */
 }
 
-.inputCpf {
+.inputCupom{
     width: 40vh;
     height: 5vh;
     padding: 1.30vh;
@@ -135,5 +135,65 @@ body {
     }
 
     }
+    
  
+}
+.teclado {
+    margin-top: 0.1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+    background-color: #fefefe;
+    border-radius: 2vh;
+    padding: 2vh;
+    box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.1);
+    border: 0.3vh solid #e0e0e0;
+}
+
+.linha-teclas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2vh;
+    justify-content: center;
+}
+
+.tecla {
+    width: 7vh;
+    height: 6vh;
+    font-size: 2vh;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom right, #ffffff, #f2f2f2);
+    border: 0.3vh solid #d1d1d1;
+    border-radius: 1.5vh;
+    cursor: pointer;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.tecla:hover {
+    background: #e6ffe6;
+    transform: scale(1.05);
+    border-color: #6d7573;
+    color: #111;
+}
+
+.tecla:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 0.2vh 0.4vh rgba(0, 0, 0, 0.15);
+}
+
+.tecla.apagar {
+    background: linear-gradient(to bottom right, #ffffff, #f2f2f2);
+    transform: scale(1.05);
+   
+    color: #111;
+}
+.tecla.limpar {
+       background: linear-gradient(to bottom right, #ffffff, #f2f2f2);
+    transform: scale(1.05);
+   
+    color: #111;
 }

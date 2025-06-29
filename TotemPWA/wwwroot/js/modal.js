@@ -34,7 +34,7 @@ function atualizarBotaoFinalizar() {
 
     if (carrinhoItens.length > 0) {
         botao.classList.remove("disabled");
-        botao.setAttribute("href", "/Home/TeladePagamento");
+        botao.setAttribute("href", "/Home/RevisarPedido");
     } else {
         botao.classList.add("disabled");
         botao.setAttribute("href", "#");

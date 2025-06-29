@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicione seu CPF</title>
+    <link rel="stylesheet" href="~/css/CPF.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="c1">
+            <div class="content">
+                <div class="conteiner">
+                    <a class="title">CPF na nota?</a>
+                    <div class="opcao-grid">    
+                        <div class="comer-aqui">
+                            <input class="inputCpf" type="text" id="cpfInput" placeholder="Digite seu CPF" max="14"> 
+                        </div>
+                    </div>
+
+                    <!-- TECLADO VIRTUAL -->
+                    <div id="tecladoVirtual" class="teclado">
+                        <div class="linha-teclas">
+                            <button class="tecla">1</button>
+                            <button class="tecla">2</button>
+                            <button class="tecla">3</button>
+                        </div>
+                        <div class="linha-teclas">
+                            <button class="tecla">4</button>
+                            <button class="tecla">5</button>
+                            <button class="tecla">6</button>
+                        </div>
+                        <div class="linha-teclas">
+                            <button class="tecla">7</button>
+                            <button class="tecla">8</button>
+                            <button class="tecla">9</button>
+                        </div>
+                        <div class="linha-teclas">
+                            <button class="tecla limpar">Limpar</button>
+                            <button class="tecla">0</button>
+                            <button class="tecla apagar">←</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ConteinerBtn">
+             <div class="NavBtn">
+        <a id="cancelar" href="@Url.Action("ComerouLevar", "Home")">Não colocar</a>
+        <a class="btnProsseguir" id="proceedButton" href="@Url.Action("ComerouLevar", "Home")" style="display: none;">Prosseguir</a>
+             </div>
+        </div>
+
+    </div>
+
+    <script src="~/js/CPF.js"></script>
+</body>
+</html>
