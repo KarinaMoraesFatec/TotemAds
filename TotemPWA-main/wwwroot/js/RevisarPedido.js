@@ -7,7 +7,10 @@ function renderizarLanchesRevisao() {
     // Limpa o grid antes de renderizar
     grid.innerHTML = '';
 
+    let total = 0;
+
     carrinhoItens.forEach((item, idx) => {
+        total += (item.preco || 0) * (item.quantidade || 1);
         // Cria uma div para cada item, com classe C1, C2, ...
         const div = document.createElement('div');
         div.className = `C${idx + 1}`;
@@ -20,6 +23,7 @@ function renderizarLanchesRevisao() {
                     <img class="opcao-imagem" src="${item.imagem}" alt="${item.nome}">
                     <h3 class="opcao-titulo">${item.nome} <span style="font-weight:normal;">x${item.quantidade}</span></h3>
                     <p class="opcao-descricao" style="font-size:1.7vh; color:#555; text-align:center;">${item.descricao || ''}</p>
+                    <span class="opcao-preco" style="font-size:2vh; color:#4CAF50; font-weight:500;">R$ ${(item.preco || 0).toFixed(2)}</span>
                 </div>
                 <button class="btn-excluir-revisao">Excluir</button>
             </div>
@@ -33,6 +37,12 @@ function renderizarLanchesRevisao() {
 
         grid.appendChild(div);
     });
+
+    // Atualiza o total na tela
+    const totalSpan = document.getElementById('totalRevisaoPreco');
+    if (totalSpan) {
+        totalSpan.textContent = `R$ ${total.toFixed(2)}`;
+    }
 }
 
 // Função para remover item do carrinho e atualizar a tela

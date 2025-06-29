@@ -33,7 +33,7 @@ body {
     overflow-y: hidden;
 
     & .title {
-        padding: 13.5vh 0vh 10vh 0vh;
+        padding: 11.5vh 0vh 10vh 0vh;
         color: #414141;
         text-align: center;
         font-size: 2.5vh;
@@ -98,8 +98,6 @@ body {
 
 
 
-
-
     .opcao-imagem {
         width: 12vh;
         height: auto;
@@ -109,12 +107,11 @@ body {
 
 
 .ConteinerBtn {
-    display: flex;
     gap: 1vh;
-    padding: 3vh;
+    padding: 0vh;
     justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Centraliza os itens verticalmente, caso necessário */
-    height: auto;
+    height: 17vh;
 
 & .NavBtn {
     width: 100%;
@@ -204,4 +201,25 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+}
+
+.total-revisao-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+    gap: 1vh;
+}
+
+.total-revisao-label {
+    font-size: 2.2vh;
+    color: #4F4F4F;
+    font-weight: 400;
+}
+
+.total-revisao-preco {
+    font-size: 2.2vh;
+    color: #FB4343;
+    font-weight: 400;
 }
