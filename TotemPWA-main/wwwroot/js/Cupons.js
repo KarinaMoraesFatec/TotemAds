@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     erroMsg.style.marginTop = "10px";
     cupomInput.parentNode.appendChild(erroMsg);
 
-    // Força letras maiúsculas na digitação
+    // Valor fixo do pedido (altere se for dinâmico)
+    const valorOriginal = 100.00;
+
     cupomInput.addEventListener("input", () => {
         cupomInput.value = cupomInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
         validarCupom();
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const numeros = valor.replace(/[^0-9]/g, "").length;
 
         if (valor.length === 8 && letras === 4 && numeros === 4) {
-            proceedButton.style.display = "block";
+            proceedButton.style.display = "inline-block";
             erroMsg.textContent = "";
         } else {
             proceedButton.style.display = "none";
@@ -28,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Teclado Virtual
     document.querySelectorAll('.tecla').forEach(botao => {
         botao.addEventListener('click', () => {
             const valor = botao.textContent.toUpperCase();
@@ -45,5 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
             cupomInput.value = texto;
             cupomInput.dispatchEvent(new Event("input"));
         });
+    });
+
+    proceedButton.addEventListener("click", () => {
+        const valorCupom = cupomInput.value;
+        const letras = valorCupom.replace(/[^A-Z]/g, "").length;
+        const numeros = valorCupom.replace(/[^0-9]/g, "").length;
+
+        if (valorCupom.length === 8 && letras === 4 && numeros === 4) {
+            const desconto = valorOriginal * 0.10;
+            const valorComDesconto = (valorOriginal - desconto).toFixed(2);
+
+            sessionStorage.setItem("cupomUsado", valorCupom);
+            sessionStorage.setItem("valorComDesconto", valorComDesconto);
+            sessionStorage.setItem("valorOriginal", valorOriginal.toFixed(2));
+        }
     });
 });

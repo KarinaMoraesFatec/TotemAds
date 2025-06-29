@@ -12,13 +12,16 @@
     <div class="main">
         <div class="c1">
             <div class="content">
+            <div class="divcupom">
+             <a class="cupom" id="cupom" href="@Url.Action("Cupons", "Home")">
+             🎟 Insira aqui seu Cupom!
+             </a>
+            </div>
+                    
                 <div class="conteiner">
-                    <a class="title">Revise seu pedido</a>
-                    <div class="divcupom">
-                          <a class="cupom" id="cupom" href="@Url.Action("Cupons", "Home")" style="margin: 0 10px;">Cupom</a>
-                    </div>
+                    <a class="title">  Revise seu pedido</a>
+                  
                     <div class="opcao-grid">
-
                         
                         <div class="C1" onclick="window.location.href='@Url.Action("Tela2", "Home")'"> 
                         </div>
@@ -41,19 +44,22 @@
                 </div>
             </div>
         </div>
-
-        <div class="ConteinerBtn">
-            <div class="total-revisao-container">
-                <span class="total-revisao-label">Total:</span>
-                <span class="total-revisao-preco" id="totalRevisaoPreco">R$ 0,00</span>
-            </div>
-             <div class="NavBtn">
-        <a id="cancelar" href="@Url.Action("tela2", "Home")">Voltar</a>
-  
-        <a id="prosseguir" href="@Url.Action("TeladePagamento", "Home")">Tudo certo!</a>
-             </div>
-        </div>
+ <div id="infoCupom" style="text-align:center; font-size:1.7vh; color: #4CAF50; margin-bottom: 8px;"></div>
+      <div class="ConteinerBtn">
+    <div class="total-revisao-container">
+        <span class="total-revisao-label">Total:</span>
+        <span id="precoRiscado" style="text-decoration: line-through; color: #999; margin-right: 10px; display: none;">R$ 0,00</span>
+        <span class="total-revisao-preco" id="totalRevisaoPreco">R$ 0,00</span>
     </div>
+
+
+    <div class="NavBtn">
+        <a id="cancelar" href="@Url.Action("Tela2", "Home")">Cancelar</a>
+        <a id="prosseguir" href="@Url.Action("TeladePagamento", "Home")">Finalizar</a>
+    </div>
+</div>
+
+
 
     <script src="~/js/RevisarPedido.js"></script>
 </body>
