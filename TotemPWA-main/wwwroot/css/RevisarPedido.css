@@ -59,7 +59,7 @@ body {
     scrollbar-color: #4545452c transparent; 
 }
 
-.C1, .C2, .C3, .C4, .C5, .C6 {
+.C1, .C2, .C3, .C4, .C5, .C6, .C7 {
     width: 90%;
     height: 18vh;
     padding: 1.30vh;
@@ -82,7 +82,8 @@ body {
 .C3 .opcao-titulo,
 .C4 .opcao-titulo,
 .C5 .opcao-titulo,
-.C6 .opcao-titulo {
+.C6 .opcao-titulo,
+.C7 .opcao-titulo {
     color: #414141;
     font-weight: 400;
     font-size: 2.2vh;
@@ -91,11 +92,11 @@ body {
     text-decoration: none;
 }
 
-.C1.selected, .C2.selected, .C3.selected, .C4.selected, .C5.selected, .C6.selected {
+.C1.selected, .C2.selected, .C3.selected, .C4.selected, .C5.selected, .C6.selected, .C7.selected {
     border: 0.5vh solid #414141; /* Adiciona a borda preta quando selecionado */
 }
 
-.C1:hover, .C2:hover, .C3:hover, .C4:hover, .C5:hover, .C6:hover {
+.C1:hover, .C2:hover, .C3:hover, .C4:hover, .C5:hover, .C6:hover, .C7:hover {
     background-color: #F0F0F0;
 }
 

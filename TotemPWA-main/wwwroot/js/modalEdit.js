@@ -167,6 +167,16 @@ document.addEventListener('DOMContentLoaded', function() {
         316: [ ],
         317: [ ],
         318: [ ],
+
+        // Molhos (IDs 310-318)
+        101: [ ],
+        102: [ ],
+        103: [ ],
+        104: [ ],
+        105: [ ],
+        106: [ ],
+        107: [ ],
+        108: [ ],
     };
 
     let currentItemId = null;
