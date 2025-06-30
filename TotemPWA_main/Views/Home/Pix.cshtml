@@ -1,0 +1,39 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento via Pix</title>
+    <link rel="stylesheet" href="~/css/Pix.css" asp-append-version="true">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="c1">
+            <div class="content">
+                <div class="top-icon">
+                    <img src="~/img/pix.png" alt="Pix" class="img-cartoes" asp-append-version="true">
+                </div>
+                <div class="conteiner">
+                    <a class="title">Escaneie o QR Code:</a>
+                    <div class="opcao-grid">
+                        <div class="qrcode">
+                            <img class="opcao-imagem" src="~/img/qrcode.png" asp-append-version="true" alt="QR Code Pix">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão Voltar fora da .content -->
+        <div class="ConteinerBtn">
+            <div class="NavBtn">
+                <a href="@Url.Action("TeladePagamento", "Home")" class="btnVoltar">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/TeladePagamento.js" asp-append-version="true"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insira sua Senha</title>
+    <link rel="stylesheet" href="~/css/senha.css" asp-append-version="true">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="c1">
+            <div class="content">
+                <div class="conteiner">
+                    <a class="title">Insira sua senha</a>
+                    <div class="opcao-grid">    
+                        <div class="comer-aqui">
+                            <input class="inputCpf" type="password" id="senhaInput" maxlength="4" placeholder="Digite sua senha de 4 dígitos"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ConteinerBtn">
+            <div class="NavBtn">
+                
+                <button id="cancelar" onclick="window.location.href='@Url.Action("TeladePagamento", "Home")'">Cancelar</button>
+                <button class="btnProsseguir" id="proceedButton" style="display: none;"> Concluir</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/Senha.js" asp-append-version="true"></script>
+</body>
+</html>
