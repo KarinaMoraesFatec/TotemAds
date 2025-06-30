@@ -13,39 +13,13 @@
     <link rel="stylesheet" href="~/css/tela2.css" asp-append-version="true">
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="~/img/favicon.png" />
-    <script src="~/js/modal.js"></script>
-    <style>
-        .menu {
-            height: calc(100vh - 200px);
-            overflow-y: auto;
-            scrollbar-width: 10px;
-            scrollbar-color: rgb(255, 255, 255) #ffffff;
-        }
-
-        .menu::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .menu::-webkit-scrollbar-track {
-            background: #ffffff;
-            border-radius: 4px;
-        }
-
-        .menu::-webkit-scrollbar-thumb {
-            background: #ffffff !important;
-            border-radius: 4px;
-        }
-
-        .menu::-webkit-scrollbar-thumb:hover {
-            background: #ffffff !important;
-        }
-    </style>
+  
 </head>
 <body>
     <div class="main">
         <!-- Header com Logo -->
         <header class="header">
-            <img src="~/img/logotipo.jpeg" alt="Logo do Restaurante" />
+            <img src="~/img/banner.jpg" alt="Logo do Restaurante" />
         </header>
 
         <div class="c1">
@@ -55,7 +29,7 @@
                 {
                     <div class="menu-item @(category.Active ? "active" : "")">
                         <a asp-controller="Home" asp-action="Menu" asp-route-categorySlug="@category.Slug">
-                            <img class="img-menu-item" src="@category.Icon" alt="@category.Name">
+                            <img  class="img-menu-item" src="@category.Icon" alt="@category.Name">
                             <div>@category.Name</div>
                         </a>
                     </div>
