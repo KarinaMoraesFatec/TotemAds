@@ -53,11 +53,13 @@
             <div class="menu">
                 @foreach (var category in Model.RootCategories)
                 {
-                    <div class="menu-item @(category.Active ? "active" : "")">
-                        <a asp-controller="Home" asp-action="Menu" asp-route-categorySlug="@category.Slug">
+                    var activeClass = category.Active ? "active" : "";
+                    <div class="menu-item @activeClass">
+                        <button class="link-button @activeClass" 
+                                onclick="location.href='/Menu/@category.Slug'">
                             <img class="img-menu-item" src="@category.Icon" alt="@category.Name">
-                            <div>@category.Name</div>
-                        </a>
+                            <span>@category.Name</span>
+                        </button>
                     </div>
                 }
             </div>

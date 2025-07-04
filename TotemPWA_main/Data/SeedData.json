@@ -8,7 +8,7 @@
         "products": [
           { "name": "Burguer 404", "price": 24.90 },
           { "name": "Full Stack", "price": 39.90 },
-          { "name": "Hello Word", "price": 24.90 },
+          { "name": "Hello Word", "price": 24.90, "image": "img/helloword.png" },
           { "name": "Frontend", "price": 44.90 },
           { "name": "DevOps Bacon", "price": 34.90 },
           { "name": "Byte Burguer", "price": 24.90 },

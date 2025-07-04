@@ -33,7 +33,7 @@ body {
     overflow-y: hidden;
 
     & .title {
-        padding: 18vh 0vh 10vh 0vh;
+        padding: 12vh 0vh 10vh 0vh;
         color: #414141;
         text-align: center;
         font-size: 2.5vh;
@@ -135,5 +135,45 @@ body {
     }
 
     }
+    
  
+}
+.teclado {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.linha-teclas {
+    display: flex;
+    gap: 1vh;
+}
+
+.tecla {
+    width: 10vh;
+    height: 6vh;
+    font-size: 2.5vh;
+    border-radius: 1.5vh;
+    border: 0.4vh solid #4a4a4a;
+    background-color: #f1f1f1;
+    color: #414141;
+    cursor: pointer;
+    font-family: 'Tilt Warp', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.tecla:hover {
+    background-color: #dedede;
+}
+
+.tecla.apagar {
+     border: 0.4vh solid #4a4a4a;
+    background-color: #f1f1f1;
+}
+
+.tecla.limpar {
+     border: 0.4vh solid #4a4a4a;
+    background-color: #f1f1f1;
 }
