@@ -1,258 +1,298 @@
 [
   {
     "name": "Lanches",
-    "icon": "https://img.icons8.com/emoji/48/hamburger-emoji.png",
+    "image": "img/menuburguerimage.png",
     "subcategories": [
       {
         "name": "Todos",
         "products": [
-          { "name": "Burguer 404", "price": 24.90 },
-          { "name": "Full Stack", "price": 39.90 },
+          { "name": "Burguer 404", "price": 24.90, "image": "img/menuburguerimage.png" },
+          { "name": "Full Stack", "price": 39.90, "image": "img/full.png" },
           { "name": "Hello Word", "price": 24.90, "image": "img/helloword.png" },
-          { "name": "Frontend", "price": 44.90 },
-          { "name": "DevOps Bacon", "price": 34.90 },
-          { "name": "Byte Burguer", "price": 24.90 },
-          { "name": "Index Burguer", "price": 25.90 },
-          { "name": "Looping Frango", "price": 26.90 },
-          { "name": "Backend", "price": 22.90 },
-          { "name": "VS Veggie", "price": 21.90 }
+          { "name": "Frontend", "price": 44.90, "image": "img/front.png" },
+          { "name": "DevOps Bacon", "price": 34.90, "image": "img/devopsbacon.png" },
+          { "name": "Byte Burguer", "price": 24.90, "image": "img/byte.png" },
+          { "name": "Index Burguer", "price": 25.90, "image": "img/haburguer.png" },
+          { "name": "Looping Frango", "price": 26.90, "image": "img/Looping.png" },
+          { "name": "Backend", "price": 22.90, "image": "img/backendd.png" },
+          { "name": "VS Veggie", "price": 21.90, "image": "img/vegan.png" }
         ]
       },
       {
         "name": "Carnes",
         "products": [
-          { "name": "Burguer 404", "price": 24.90 },
-          { "name": "Full Stack", "price": 39.90 },
-          { "name": "Hello Word", "price": 24.90 },
-          { "name": "Frontend", "price": 44.90 },
-          { "name": "DevOps Bacon", "price": 34.90 },
-          { "name": "Byte Burguer", "price": 24.90 },
-          { "name": "Index Burguer", "price": 25.90 }
+          { "name": "Burguer 404", "price": 24.90, "image": "img/menuburguerimage.png" },
+          { "name": "Full Stack", "price": 39.90, "image": "img/full.png" },
+          { "name": "Hello Word", "price": 24.90, "image": "img/helloword.png" },
+          { "name": "Frontend", "price": 44.90, "image": "img/front.png" },
+          { "name": "DevOps Bacon", "price": 34.90, "image": "img/devopsbacon.png" },
+          { "name": "Byte Burguer", "price": 24.90, "image": "img/byte.png" },
+          { "name": "Index Burguer", "price": 25.90, "image": "img/haburguer.png" }
         ]
       },
       {
         "name": "Frango",
         "products": [
-          { "name": "Looping Frango", "price": 26.90 },
-          { "name": "Backend", "price": 22.90 }
+          { "name": "Looping Frango", "price": 26.90, "image": "img/Looping.png" },
+          { "name": "Backend", "price": 22.90, "image": "img/backendd.png" }
         ]
       },
       {
         "name": "Vegano",
         "products": [
-          { "name": "VS Veggie", "price": 21.90 }
+          { "name": "VS Veggie", "price": 21.90, "image": "img/vegan.png" }
         ]
       }
     ]
   },
   {
     "name": "Combos",
-    "icon": "https://img.icons8.com/emoji/48/beverage-box-emoji.png",
+    "image": "img/telainicialcombos.png",
     "subcategories": [
       {
         "name": "Todos",
         "products": [
-          { "name": "Combo 1", "price": 54.90 },
-          { "name": "Combo 2", "price": 59.90 },
-          { "name": "Combo 3", "price": 49.90 },
-          { "name": "Combo 4", "price": 5.90 },
-          { "name": "Combo 5", "price": 4.90 },
-          { "name": "Combo 6", "price": 4.90 },
-          { "name": "Casal Doce", "price": 79.90 },
-          { "name": "Casal Apaixonado", "price": 89.90 },
-          { "name": "Familia", "price": 115.90 }
+          { "name": "Combo 1", "price": 54.90, "image": "img/1.png" },
+          { "name": "Combo 2", "price": 59.90, "image": "img/2.png" },
+          { "name": "Combo 3", "price": 49.90, "image": "img/3.png" },
+          { "name": "Combo 4", "price": 55.90, "image": "img/4.png" },
+          { "name": "Combo 5", "price": 53.90, "image": "img/5.png" },
+          { "name": "Combo 6", "price": 56.90, "image": "img/6.png" },
+          { "name": "Casal Doce", "price": 79.90, "image": "img/7.png" },
+          { "name": "Casal Apaixonado", "price": 89.90, "image": "img/9.png" },
+          { "name": "Familia", "price": 115.90, "image": "img/8.png" }
         ]
       },
       {
         "name": "Simples",
         "products": [
-          { "name": "Combo 1", "price": 54.90 },
-          { "name": "Combo 2", "price": 59.90 },
-          { "name": "Combo 3", "price": 49.90 },
-          { "name": "Combo 4", "price": 5.90 },
-          { "name": "Combo 5", "price": 4.90 },
-          { "name": "Combo 6", "price": 4.90 }
+          { "name": "Combo 1", "price": 54.90, "image": "img/1.png" },
+          { "name": "Combo 2", "price": 59.90, "image": "img/2.png" },
+          { "name": "Combo 3", "price": 49.90, "image": "img/3.png" },
+          { "name": "Combo 4", "price": 55.90, "image": "img/4.png" },
+          { "name": "Combo 5", "price": 53.90, "image": "img/5.png" },
+          { "name": "Combo 6", "price": 56.90, "image": "img/6.png" }
         ]
       },
       {
         "name": "Casal",
         "products": [
-          { "name": "Casal Doce", "price": 79.90 },
-          { "name": "Casal Apaixonado", "price": 89.90 }
+          { "name": "Casal Doce", "price": 79.90, "image": "img/7.png" },
+          { "name": "Casal Apaixonado", "price": 89.90, "image": "img/9.png" }
         ]
       },
       {
         "name": "Familia",
         "products": [
-          { "name": "Familia", "price": 115.90 }
+          { "name": "Familia", "price": 115.90, "image": "img/8.png" }
         ]
       }
     ]
   },
   {
     "name": "Sobremesas",
-    "icon": "https://img.icons8.com/color/48/ice-cream-sundae.png",
+    "image": "img/sobremesa.png",
     "subcategories": [
       {
-        "name": "Doces Clássicos",
-        "icon": "https://img.icons8.com/color/48/cupcake.png",
+        "name": "Todos",
         "products": [
-          { "name": "Brownie", "price": 9.00 },
-          { "name": "Pudim", "price": 8.50 },
-          { "name": "Torta de Limão", "price": 10.00 },
-          { "name": "Mousse de Chocolate", "price": 9.50 }
-        ]
-      },
-      {
-        "name": "Bolos",
-        "icon": "https://img.icons8.com/color/48/birthday-cake.png",
-        "products": [
-          { "name": "Bolo de Cenoura", "price": 10.00 },
-          { "name": "Bolo de Chocolate", "price": 10.50 },
-          { "name": "Bolo de Fubá", "price": 9.50 },
-          { "name": "Bolo de Morango", "price": 11.00 }
+          { "name": "Sorvete de Morango", "price": 8.90, "image": "img/sorvetemorango.png" },
+          { "name": "Sorvete de Cookie", "price": 8.90, "image": "img/sorvetecookie.png" },
+          { "name": "Sorvete de Chocolate", "price": 8.90, "image": "img/sorvetechocolate.png" },
+          { "name": "Milk-Shake de Morango", "price": 18.90, "image": "img/milkmorango.png" },
+          { "name": "Milk-Shake de Pipoca", "price": 19.90, "image": "img/milkpipoca.png" },
+          { "name": "Milk-Shake de Baunilha", "price": 20.90, "image": "img/milkbaunilha.png" },
+          { "name": "Petit Gateau", "price": 22.90, "image": "img/petit.png" },
+          { "name": "Brownie", "price": 10.90, "image": "img/brownie.png" }
         ]
       },
       {
         "name": "Sorvetes",
-        "icon": "https://img.icons8.com/color/48/ice-cream-cone.png",
         "products": [
-          { "name": "Sorvete de Creme", "price": 7.50 },
-          { "name": "Sorvete de Chocolate", "price": 7.00 },
-          { "name": "Sorvete de Morango", "price": 8.00 },
-          { "name": "Sorvete de Flocos", "price": 8.50 }
+          { "name": "Sorvete de Morango", "price": 8.90, "image": "img/sorvetemorango.png" },
+          { "name": "Sorvete de Cookie", "price": 8.90, "image": "img/sorvetecookie.png" },
+          { "name": "Sorvete de Chocolate", "price": 8.90, "image": "img/sorvetechocolate.png" }
         ]
       },
       {
-        "name": "Extras",
-        "icon": "https://img.icons8.com/color/48/sprinkles.png",
+        "name": "Milk Shakes",
         "products": [
-          { "name": "Granulado", "price": 2.00 },
-          { "name": "Chantilly", "price": 2.50 },
-          { "name": "Calda de Chocolate", "price": 2.50 },
-          { "name": "Farofa Doce", "price": 2.00 }
+          { "name": "Milk-Shake de Morango", "price": 18.90, "image": "img/milkmorango.png" },
+          { "name": "Milk-Shake de Pipoca", "price": 19.90, "image": "img/milkpipoca.png" },
+          { "name": "Milk-Shake de Baunilha", "price": 20.90, "image": "img/milkbaunilha.png" }
         ]
       },
       {
-        "name": "Combos Doces",
-        "icon": "https://img.icons8.com/color/48/dessert.png",
+        "name": "Doces",
         "products": [
-          { "name": "Café & Brownie", "price": 12.00 },
-          { "name": "Chocolate & Bolo", "price": 13.50 },
-          { "name": "Café & Cookie", "price": 11.50 },
-          { "name": "Mousse & Shake", "price": 14.00 }
+          { "name": "Petit Gateau", "price": 22.90, "image": "img/petit.png" },
+          { "name": "Brownie", "price": 10.90, "image": "img/brownie.png" }
         ]
       }
     ]
   },
   {
-    "name": "Acompanhamentos",
-    "icon": "https://img.icons8.com/color/48/french-fries.png",
+    "name": "Molhos",
+    "image": "img/telainicialmolhos.png",
     "subcategories": [
       {
-        "name": "Fritas",
-        "icon": "https://img.icons8.com/color/48/french-fries.png",
+        "name": "Todos",
         "products": [
-          { "name": "Fritas DevOps", "price": 9.00 },
-          { "name": "Fritas com Bacon JS", "price": 10.00 },
-          { "name": "Fritas com Cheddar PHP", "price": 9.50 },
-          { "name": "Fritas Curly Kotlin", "price": 9.80 }
+          { "name": "Molho de Barbecue", "price": 4.90, "image": "img/molhobarbecue" },
+          { "name": "Molho de Maionese", "price": 4.90, "image": "img/maionese" },
+          { "name": "Molho de Queijos", "price": 5.90, "image": "img/molhodequeijos" },
+          { "name": "Molho Verde", "price": 5.90, "image": "img/molhoverdedacsa" },
+          { "name": "Molho Rose", "price": 7.90, "image": "img/molhorose" },
+          { "name": "Molho de Alho", "price": 10.90, "image": "img/molhoultrasecretodacasa" },
+          { "name": "Molho de Pimenta", "price": 5.90, "image": "img/molhodepimenta" }
         ]
       },
       {
-        "name": "Anéis de Cebola",
-        "icon": "https://img.icons8.com/color/48/onion-ring.png",
+        "name": "Tradicionais",
         "products": [
-          { "name": "Onion JavaScript", "price": 8.00 },
-          { "name": "Onion Angular", "price": 8.50 },
-          { "name": "Onion React", "price": 9.00 },
-          { "name": "Onion HTML", "price": 8.20 }
+          { "name": "Molho de Barbecue", "price": 4.90, "image": "img/molhobarbecue" },
+          { "name": "Molho de Maionese", "price": 4.90, "image": "img/maionese" }
         ]
       },
       {
-        "name": "Petiscos de API",
-        "icon": "https://img.icons8.com/color/48/snack.png",
+        "name": "Especiais",
         "products": [
-          { "name": "API Bites", "price": 7.00 },
-          { "name": "Restful Chips", "price": 6.80 },
-          { "name": "Token Nachos", "price": 7.50 },
-          { "name": "Cookie Crumbs", "price": 6.90 }
+          { "name": "Molho de Queijos", "price": 5.90, "image": "img/molhodequeijos" },
+          { "name": "Molho Verde", "price": 5.90, "image": "img/molhoverdedacsa" },
+          { "name": "Molho Rose", "price": 7.90, "image": "img/molhorose" },
+          { "name": "Molho de Alho", "price": 10.90, "image": "img/molhoultrasecretodacasa" }
         ]
       },
       {
-        "name": "Saladas",
-        "icon": "https://img.icons8.com/color/48/greek-salad.png",
+        "name": "Picantes",
         "products": [
-          { "name": "Salada JSON", "price": 10.00 },
-          { "name": "Salada YAML", "price": 9.50 },
-          { "name": "Salada Swagger", "price": 10.50 },
-          { "name": "Salada REST", "price": 9.80 }
-        ]
-      },
-      {
-        "name": "Extras Dev",
-        "icon": "https://img.icons8.com/color/48/sauce.png",
-        "products": [
-          { "name": "Molho ORM", "price": 2.50 },
-          { "name": "Cheddar CLI", "price": 2.00 },
-          { "name": "Bacon NGINX", "price": 3.00 },
-          { "name": "Ketchup DNS", "price": 1.50 }
+          { "name": "Molho de Pimenta", "price": 5.90, "image": "img/molhodepimenta" }
         ]
       }
     ]
   },
   {
-    "name": "Café da Manhã",
-    "icon": "https://img.icons8.com/color/48/breakfast.png",
+    "name": "Ofertas",
+    "image": "img/promocoes.png",
     "subcategories": [
       {
-        "name": "Pães e Torradas",
-        "icon": "https://img.icons8.com/color/48/bread.png",
+        "name": "Todos",
         "products": [
-          { "name": "Pão na Chapa", "price": 5.00 },
-          { "name": "Pão Francês", "price": 5.50 },
-          { "name": "Croissant", "price": 6.00 },
-          { "name": "Torrada com Manteiga", "price": 5.20 }
+          { "name": "Byte Burguer", "price": 19.90, "image": "img/byte.png" },
+          { "name": "Index Burguer", "price": 15.90, "image": "img/haburguer.png" },
+          { "name": "Sprite", "price": 4.90, "image": "img/sprite.png" },
+          { "name": "Suco de Pessego", "price": 5.90, "image": "img/sucodepessego.png" },
+          { "name": "Petit Gateau", "price": 16.90, "image": "img/petit.png" }
         ]
       },
       {
-        "name": "Bebidas Quentes",
-        "icon": "https://img.icons8.com/color/48/hot-chocolate.png",
+        "name": "Lanches",
         "products": [
-          { "name": "Café Preto", "price": 6.00 },
-          { "name": "Chá Natural", "price": 5.50 },
-          { "name": "Capuccino", "price": 7.00 },
-          { "name": "Chocolate Quente", "price": 7.50 }
+          { "name": "Byte Burguer", "price": 19.90, "image": "img/byte.png" },
+          { "name": "Index Burguer", "price": 15.90, "image": "img/haburguer.png" }
         ]
       },
       {
-        "name": "Frutas",
-        "icon": "https://img.icons8.com/color/48/fruit-bag.png",
+        "name": "Bebidas",
         "products": [
-          { "name": "Banana", "price": 3.00 },
-          { "name": "Maçã", "price": 3.20 },
-          { "name": "Uva", "price": 3.50 },
-          { "name": "Manga", "price": 3.80 }
+          { "name": "Sprite", "price": 4.90, "image": "img/sprite.png" },
+          { "name": "Suco de Pessego", "price": 5.90, "image": "img/sucodepessego.png" }
         ]
       },
       {
-        "name": "Iogurtes",
-        "icon": "https://img.icons8.com/color/48/yogurt.png",
+        "name": "Sobremesas",
         "products": [
-          { "name": "Iogurte Natural", "price": 6.00 },
-          { "name": "Iogurte com Granola", "price": 6.50 },
-          { "name": "Iogurte com Mel", "price": 6.80 },
-          { "name": "Iogurte com Frutas", "price": 7.00 }
+          { "name": "Petit Gateau", "price": 16.90, "image": "img/petit.png" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bebidas",
+    "image": "img/telainicialbebidas.png",
+    "subcategories": [
+      {
+        "name": "Todos",
+        "products": [
+          { "name": "Coca Cola", "price": 8.90, "image": "img/coca.png" },
+          { "name": "Fanta Laranja", "price": 8.90, "image": "img/fantalaranja.png" },
+          { "name": "Fanta Uva", "price": 8.90, "image": "img/fantauva.png" },
+          { "name": "Sprite", "price": 8.90, "image": "img/sprite.png" },
+          { "name": "Suco de Uva", "price": 9.90, "image": "img/sucouva.png" },
+          { "name": "Suco de Pessego", "price": 9.90, "image": "img/sucodepessego.png" },
+          { "name": "Água", "price": 7.90, "image": "img/agua.png" },
+          { "name": "Água com Gás", "price": 7.90, "image": "img/aguacomgas.png" },
+          { "name": "Coca Cola Zero", "price": 8.90, "image": "img/cocazero.png" },
+          { "name": "Sprite Zero", "price": 8.90, "image": "img/spritezero.png" }
         ]
       },
       {
-        "name": "Cereais",
-        "icon": "https://img.icons8.com/color/48/cornflakes.png",
+        "name": "Refrigerantes",
         "products": [
-          { "name": "Cereal com Leite", "price": 5.50 },
-          { "name": "Cereal de Milho", "price": 5.80 },
-          { "name": "Cereal de Aveia", "price": 6.00 },
-          { "name": "Cereal Integral", "price": 6.20 }
+          { "name": "Coca Cola", "price": 8.90, "image": "img/coca.png" },
+          { "name": "Fanta Laranja", "price": 8.90, "image": "img/fantalaranja.png" },
+          { "name": "Fanta Uva", "price": 8.90, "image": "img/fantauva.png" },
+          { "name": "Sprite", "price": 8.90, "image": "img/sprite.png" }
+        ]
+      },
+      {
+        "name": "Sucos",
+        "products": [
+          { "name": "Suco de Uva", "price": 9.90, "image": "img/sucouva.png" },
+          { "name": "Suco de Pessego", "price": 9.90, "image": "img/sucodepessego.png" }
+        ]
+      },
+      {
+        "name": "Águas",
+        "products": [
+          { "name": "Água", "price": 7.90, "image": "img/agua.png" },
+          { "name": "Água com Gás", "price": 7.90, "image": "img/aguacomgas.png" }
+        ]
+      },
+      {
+        "name": "Zero Açúcar",
+        "products": [
+          { "name": "Coca Cola Zero", "price": 8.90, "image": "img/cocazero.png" },
+          { "name": "Sprite Zero", "price": 8.90, "image": "img/spritezero.png" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Extras",
+    "image": "img/telainicalextras.png",
+    "subcategories": [
+      {
+        "name": "Todos",
+        "products": [
+          { "name": "Batata Frita", "price": 12.90, "image": "img/batata.png" },
+          { "name": "Batata com Cheddar", "price": 18.90, "image": "img/batatacheddar.png" },
+          { "name": "Batata com Cheddar e Bacon", "price": 22.90, "image": "img/batatacheddarcombacon.png" },
+          { "name": "Batata Rústica", "price": 15.90, "image": "img/batatarustica.png" },
+          { "name": "Batata Chips", "price": 8.90, "image": "img/batatachips.png" },
+          { "name": "Chips de Batata Doce", "price": 9.90, "image": "img/chipsdebatatadoce.png" },
+          { "name": "Nuggets 5un", "price": 12.90, "image": "img/nuggets5.png" },
+          { "name": "Nuggets 10un", "price": 19.90, "image": "img/nuggets.png" },
+          { "name": "Nuggets 20un", "price": 34.90, "image": "img/nuggets8.png" }
+        ]
+      },
+      {
+        "name": "Batatas",
+        "products": [
+          { "name": "Batata Frita", "price": 12.90, "image": "img/batata.png" },
+          { "name": "Batata com Cheddar", "price": 18.90, "image": "img/batatacheddar.png" },
+          { "name": "Batata com Cheddar e Bacon", "price": 22.90, "image": "img/batatacheddarcombacon.png" },
+          { "name": "Batata Rústica", "price": 15.90, "image": "img/batatarustica.png" },
+          { "name": "Batata Chips", "price": 8.90, "image": "img/batatachips.png" },
+          { "name": "Chips de Batata Doce", "price": 9.90, "image": "img/chipsdebatatadoce.png" }
+        ]
+      },
+      {
+        "name": "Nuggets",
+        "products": [
+          { "name": "Nuggets 5un", "price": 12.90, "image": "img/nuggets5.png" },
+          { "name": "Nuggets 10un", "price": 19.90, "image": "img/nuggets.png" },
+          { "name": "Nuggets 20un", "price": 34.90, "image": "img/nuggets8.png" }
         ]
       }
     ]
