@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
-using TotemPWA.Models;
+using TotemPWA_main.Models;
 using System.Collections.Generic;
 
-namespace TotemPWA.ViewModels
+namespace TotemPWA_main.ViewModels
 {
     public class CategoryViewModel
     {

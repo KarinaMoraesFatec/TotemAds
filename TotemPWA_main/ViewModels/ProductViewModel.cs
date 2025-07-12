@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
-using TotemPWA.Models;
+using TotemPWA_main.Models;
 
-namespace TotemPWA.ViewModels
+namespace TotemPWA_main.ViewModels
 {
     public class ProductViewModel
     {

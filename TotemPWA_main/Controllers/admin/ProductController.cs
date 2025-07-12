@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Threading.Tasks;
 using System.Linq;
-using TotemPWA.Data;
-using TotemPWA.Models;
-using TotemPWA.ViewModels;
+using TotemPWA_main.Data;
+using TotemPWA_main.Models;
+using TotemPWA_main.ViewModels;
 
-namespace TotemPWA.Controllers.Admin
+namespace TotemPWA_main.Controllers.Admin
 {
     [Route("Admin/[controller]/[action]")]
     public class ProductController : Controller

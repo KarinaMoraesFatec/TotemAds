@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using TotemPWA.Models;
-using TotemPWA.Data;
-using TotemPWA.ViewModels;
+using TotemPWA_main.Models;
+using TotemPWA_main.Data;
+using TotemPWA_main.ViewModels;
 
-namespace TotemPWA.Controllers.Admin
+namespace TotemPWA_main.Controllers.Admin
 {
     [Route("Admin/[controller]/[action]")]
     public class CategoryController : Controller

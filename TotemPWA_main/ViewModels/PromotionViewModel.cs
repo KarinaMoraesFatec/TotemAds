@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace TotemPWA.ViewModels
+namespace TotemPWA_main.ViewModels
 {
     public class PromotionViewModel
     {

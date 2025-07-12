@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TotemPWA.Data;
-using TotemPWA.Models;
-using TotemPWA.ViewModels;
+using TotemPWA_main.Data;
+using TotemPWA_main.Models;
+using TotemPWA_main.ViewModels;
 
-namespace TotemPWA.Controllers.Admin
+namespace TotemPWA_main.Controllers.Admin
 {
     public class PromotionController : Controller
     {

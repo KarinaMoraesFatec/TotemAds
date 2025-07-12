@@ -1,4 +1,4 @@
-namespace TotemPWA.ViewModels
+namespace TotemPWA_main.ViewModels
 {
     public class CategoryItemViewModel
     {

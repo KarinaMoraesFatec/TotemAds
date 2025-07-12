@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TotemPWA.Data;
-using TotemPWA.Models;
+using TotemPWA_main.Data;
+using TotemPWA_main.Models;
 
-namespace TotemPWA.Controllers.Admin
+namespace TotemPWA_main.Controllers.Admin
 {
     public class CupomController : Controller
     {

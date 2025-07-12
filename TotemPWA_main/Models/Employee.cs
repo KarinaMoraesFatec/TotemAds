@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace TotemPWA.Models
+namespace TotemPWA_main.Models
 {
 
     public class Employee
