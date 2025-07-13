@@ -1,13 +1,13 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TotemPWA.Models;
+using TotemPWA_main.Models;
 //using TotemPWA.Models.ViewModels;
-using TotemPWA.ViewModels;
-using TotemPWA.Data;
+using TotemPWA_main.ViewModels;
+using TotemPWA_main.Data;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace TotemPWA.Controllers;
+namespace TotemPWA_main.Controllers;
 
 public class HomeController : Controller
 {

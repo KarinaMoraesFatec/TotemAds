@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TotemPWA.Data;
+using TotemPWA_main.Data;
 
 #nullable disable
 
-namespace TotemPWA.Migrations
+namespace TotemPWA_main.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20250627235111_Migrations")]

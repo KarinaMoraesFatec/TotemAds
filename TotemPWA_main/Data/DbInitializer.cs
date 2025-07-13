@@ -1,7 +1,7 @@
 using System.Text.Json;
-using TotemPWA.Models;
+using TotemPWA_main.Models;
 
-namespace TotemPWA.Data
+namespace TotemPWA_main.Data
 {
     public static class DbInitializer
     {

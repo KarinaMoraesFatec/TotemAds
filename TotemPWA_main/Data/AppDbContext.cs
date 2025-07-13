@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using TotemPWA.Models;
+using TotemPWA_main.Models;
 
-namespace TotemPWA.Data
+namespace TotemPWA_main.Data
 {
 
     public class AppDbContext : DbContext

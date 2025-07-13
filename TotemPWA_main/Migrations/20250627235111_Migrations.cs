@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace TotemPWA.Migrations
+namespace TotemPWA_main.Migrations
 {
     /// <inheritdoc />
     public partial class Migrations : Migration
