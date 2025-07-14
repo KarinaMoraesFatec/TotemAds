@@ -214,7 +214,7 @@ body {
     margin-top: 1vh;
 }
 
-#cancelar, #prosseguir, #botaoCarrinho {
+#cancelar, #prosseguir, #botaoCarrinho  , #cancelarr {
     font-size: 2vh;
     text-align: center;
     height: 4.4vh;
@@ -227,11 +227,20 @@ body {
 }
 
 #cancelar {
-    color: #414141;
+
+    background-color: #9FD942;
+    color: #fff;
+    border: 0.5vh solid #9FD942;
+    width: 20vh;
+}
+
+#cancelarr {
+   color: #414141;
     border: 0.5vh solid #414141;
     background: none;
     width: 20vh;
 }
+
 
 #prosseguir {
     background-color: #9FD942;

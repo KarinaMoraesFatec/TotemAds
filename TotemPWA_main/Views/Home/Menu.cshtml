@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
     <link rel="stylesheet" href="~/css/tela2.css" asp-append-version="true">
-    
-
-
-   <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
     <script src="~/js/modal.js"></script>
     <style>
@@ -35,88 +30,74 @@
             border-radius: 4px;
         }
 
-       .menu::-webkit-scrollbar-thumb:hover {
+        .menu::-webkit-scrollbar-thumb:hover {
             background: #ffffff !important;
         }
-        
     </style>
 </head>
 <body>
 
     <div class="main">
-        <!-- Banner para Lanches -->
         <div class="banner" id="banner-lanches">
             <img src="~/img/banner.jpg" asp-append-version="true" alt="Banner">
         </div>
 
-        <!-- Banner para Combos -->
         <div class="banner" id="banner-combos" style="display: none;">
             <img src="~/img/telainicialcombos.png" asp-append-version="true" alt="Banner Combos">
         </div>
 
-        <!-- Banner para Sobremesas -->
         <div class="banner" id="banner-sobremesas" style="display: none;">
             <img src="~/img/telainicialsobremesass.jpg" asp-append-version="true" alt="Banner Sobremesas">
         </div>
- 
-         <!-- Banner para Combos -->
-        <div class="banner" id="banner-combos" style="display: none;" >
-            <img src="~/img/telainicialcombos.png" asp-append-version="true" alt="Banner Combos">
-        </div>
 
-        <!-- Banner para Molhos -->
         <div class="banner" id="banner-molhos" style="display: none;">
             <img src="~/img/telainicialmolhos.jpg" asp-append-version="true" alt="Banner Molhos">
         </div>
 
-        <!-- Banner para Ofertas -->
         <div class="banner" id="banner-ofertas" style="display: none;">
             <img src="~/img/promocoes.png" asp-append-version="true" alt="Banner Ofertas">
         </div>
 
-        <!-- Banner para Bebidas -->
         <div class="banner" id="banner-bebidas" style="display: none;">
             <img src="~/img/telainicialbebidas.jpg" asp-append-version="true" alt="Banner Bebidas">
         </div>
 
-        <!-- Banner para Extras -->
         <div class="banner" id="banner-extras" style="display: none;">
             <img src="~/img/telainicialextras.png" asp-append-version="true" alt="Banner Extras">
         </div>
 
         <div class="c1">
             <div class="menu">
-                <div class="menu-item active" onclick="alternarConteudo('lanches')">
+                <div class="menu-item active" onclick="alternarConteudo('lanches', this)">
                     <img class="img-menu-item" src="~/img/menuburguerimage.png" asp-append-version="true" alt="Lanches">
                     <div>Lanches</div>
                 </div>
-                <div class="menu-item" onclick="alternarConteudo('combos')">
+                <div class="menu-item" onclick="alternarConteudo('combos', this)">
                     <img class="img-menu-item" src="~/img/combos.png" asp-append-version="true" alt="Combos">
                     <div>Combos</div>
                 </div>
-                <div class="menu-item" onclick="alternarConteudo('sobremesas')">
+                <div class="menu-item" onclick="alternarConteudo('sobremesas', this)">
                     <img class="img-menu-item" src="~/img/sobremesa.png" asp-append-version="true" alt="Sobremesas">
                     <div>Sobremesas</div>
                 </div>
-                <div class="menu-item" onclick="alternarConteudo('molhos')">
+                <div class="menu-item" onclick="alternarConteudo('molhos', this)">
                     <img class="img-menu-item" src="~/img/molhos.png" asp-append-version="true" alt="Molhos">
                     <div>Molhos</div>
                 </div>
-                <div class="menu-item" onclick="alternarConteudo('ofertas')">
+                <div class="menu-item" onclick="alternarConteudo('ofertas', this)">
                     <img class="img-menu-item" src="~/img/cupom.png" asp-append-version="true" alt="Promoções">
                     <div>Promoções</div>
                 </div>
-                <div class="menu-item" onclick="alternarConteudo('bebidas')">
+                <div class="menu-item" onclick="alternarConteudo('bebidas', this)">
                     <img class="img-menu-item" src="~/img/bebidas.png" asp-append-version="true" alt="Bebidas">
                     <div>Bebidas</div>
                 </div>
-                <div class="menu-item" onclick="alternarConteudo('extras')">
+                <div class="menu-item" onclick="alternarConteudo('extras', this)">
                     <img class="img-menu-item" src="~/img/batata.png" asp-append-version="true" alt="Extras">
                     <div>Extras</div>
                 </div>
             </div>
             <div class="content">
-                <!-- Conteúdo de Lanches -->
                 <div id="conteudo-lanches">
                     <div class="container-categoria">
                         <div class="nav-categorias">
@@ -128,73 +109,63 @@
                     </div>
                     <div class="pedido">
                         <div class="pedido-grid">
-                            <!-- Item 1 -->
                             <div class="pedido-item" data-id="10" data-categoria="carne" data-descricao="Pão de gergelim, cebola, alface, queijo cheddar, dois hambúrgueres de costela 180g" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/menuburguerimage.png" asp-append-version="true" alt="Burguer 404">
-                                <h3 class="pedido-titulo">Burguer 404</h3> 
+                                <h3 class="pedido-titulo">Burguer 404</h3>
                                 <h4 class="pedido-preco">R$ 24,90</h4>
                             </div>
 
-                            <!-- Item 2 -->
                             <div class="pedido-item" data-id="11" data-categoria="carne" data-descricao="Pão brioche, queijo prato, hambúrguer de costela 200g, bacon, cebola caramelizada" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/full.png" asp-append-version="true" alt="Full Stack">
-                                <h3 class="pedido-titulo">Full Stack</h3> 
+                                <h3 class="pedido-titulo">Full Stack</h3>
                                 <h4 class="pedido-preco">R$ 39,90</h4>
                             </div>
 
-                            <!-- Item 3 -->
                             <div class="pedido-item" data-id="12" data-categoria="frango" data-descricao="Hambúrgueres de frango de 150g, alface e molho de alho" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/Looping.png" asp-append-version="true" alt="Looping Triplo">
-                                <h3 class="pedido-titulo">Looping Frango</h3> 
+                                <h3 class="pedido-titulo">Looping Frango</h3>
                                 <h4 class="pedido-preco">R$ 26,90</h4>
                             </div>
 
-                            <!-- Item 4 -->
                             <div class="pedido-item" data-id="13" data-categoria="carne" data-descricao="Pão australiano, hambúrguer de fraldinha 180g, queijo, picles, cebola roxa" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/helloword.png" asp-append-version="true" alt="Hello Word">
-                                <h3 class="pedido-titulo">Hello Word</h3> 
+                                <h3 class="pedido-titulo">Hello Word</h3>
                                 <h4 class="pedido-preco">R$ 24,90</h4>
                             </div>
 
-                            <!-- Item 5 -->
                             <div class="pedido-item" data-id="14" data-categoria="vegano" data-descricao="Pão integral, hambúrguer de grão-de-bico, abobrinha, berinjela e molho de iogurte" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/vegan.png" asp-append-version="true" alt="VS Veggie">
-                                <h3 class="pedido-titulo">VS Veggie</h3> 
+                                <h3 class="pedido-titulo">VS Veggie</h3>
                                 <h4 class="pedido-preco">R$ 21,90</h4>
                             </div>
 
-                            <!-- Item 6 -->
                             <div class="pedido-item" data-id="15" data-categoria="frango" data-descricao="Pão brioche, hambúrguer de frango 180g, queijo cheddar, alface, cebola" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/backendd.png" asp-append-version="true" alt="Backend">
-                                <h3 class="pedido-titulo">Backend</h3> 
+                                <h3 class="pedido-titulo">Backend</h3>
                                 <h4 class="pedido-preco">R$ 22,90</h4>
                             </div>
 
-                            <!-- Item 7 -->
                             <div class="pedido-item" data-id="16" data-categoria="carne" data-descricao="Pão brioche, dois hambúrgueres de costela 180g, queijo cheddar, bacon, molho barbecue" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/front.png" asp-append-version="true" alt="Frontend">
-                                <h3 class="pedido-titulo">Frontend</h3> 
+                                <h3 class="pedido-titulo">Frontend</h3>
                                 <h4 class="pedido-preco">R$ 44,90</h4>
                             </div>
 
-                            <!-- Item 8 -->
                             <div class="pedido-item" data-id="17" data-categoria="carne" data-descricao="Pão de hambúrguer com gergelim, hambúrguer de costela 200g, queijo, bacon, cebola crispy" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/devopsbacon.png" asp-append-version="true" alt="DevOps Bacon">
-                                <h3 class="pedido-titulo">DevOps Bacon</h3> 
+                                <h3 class="pedido-titulo">DevOps Bacon</h3>
                                 <h4 class="pedido-preco">R$ 34,90</h4>
                             </div>
 
-                            <!-- Item 9 -->
                             <div class="pedido-item" data-id="18" data-categoria="carne" data-descricao="Pão de batata, hambúrguer de costela 150g, queijo coalho, molho de pimenta" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/byte.png" asp-append-version="true" alt="Byte Burguer">
-                                <h3 class="pedido-titulo">Byte Burguer</h3> 
+                                <h3 class="pedido-titulo">Byte Burguer</h3>
                                 <h4 class="pedido-preco">R$ 24,90</h4>
                             </div>
 
-                            <!-- Item 10 -->
                             <div class="pedido-item" data-id="19" data-categoria="carne" data-descricao="Pão de hambúrguer tradicional, hambúrguer de fraldinha 180g, queijo, alface, tomate" onclick="abrirModalEditar(this)">
                                 <img class="pedido-imagem" src="~/img/haburguer.png" asp-append-version="true" alt="Index Burguer">
-                                <h3 class="pedido-titulo">Index Burguer</h3> 
+                                <h3 class="pedido-titulo">Index Burguer</h3>
                                 <h4 class="pedido-preco">R$ 25,90</h4>
                             </div>
 
@@ -202,43 +173,31 @@
                     </div>
                 </div>
 
-                <!-- Conteúdo de Combos -->
                 <div id="conteudo-combos" style="display: none;">
                     <partial name="combos" />
                 </div>
 
-                <!-- Conteúdo de Sobremesas -->
                 <div id="conteudo-sobremesas" style="display: none;">
                     <partial name="sobremesa" />
                 </div>
 
-                <!-- Conteúdo de Molhos -->
                 <div id="conteudo-molhos" style="display: none;">
                     <partial name="molhos" />
                 </div>
 
-                <!-- Conteúdo de Ofertas -->
                 <div id="conteudo-ofertas" style="display: none;">
                     <partial name="ofertas" />
                 </div>
 
-                <!-- Conteúdo de Extras -->
                 <div id="conteudo-extras" style="display: none;">
                     <partial name="extras" />
                 </div>
 
-                <!-- Conteúdo de Combos -->
-                <div id="conteudo-combos" style="display: none;">
-                    <partial name="combos" />
-                </div>
-
-                <!-- Conteúdo de Bebidas -->
                 <div id="conteudo-bebidas" style="display: none;">
                     <partial name="bebidas" />
                 </div>
             </div>
-            
-            <!-- Modal de Edição de Item -->
+
             <div id="modalEditarItem" class="modal-editar">
                 <div class="modal-editar-content">
                     <span class="fechar-modal-editar">&times;</span>
@@ -250,60 +209,22 @@
                             <p class="modal-editar-descricao"></p>
                         </div>
                         <div class="modal-editar-ingredientes">
-                            <!-- Ingredientes serão preenchidos via JavaScript -->
-                        </div>
+                            </div>
                     </div>
                     <div class="modal-editar-botoes">
                         <button class="modal-btn-confirm"><a>Confirmar</a></button>
                     </div>
                 </div>
             </div>
-            
 
-            <!-- Modal do Carrinho (existente) -->
             <div id="modalCarrinho" class="modal">
                 <div class="modal-content">
                     <span id="fecharModal" class="fechar-modal">&times;</span>
-                    <h2 class="TituloCarrinho">Carrinho</h2>  
+                    <h2 class="TituloCarrinho">Carrinho</h2>
                     <div class="modal-grid">
-                            <div class="modal-pedido">
-                                <img class="modal-pedido-imagem" src="~/img/menuburguerimage.png" asp-append-version="true" alt="Burguer 404">
-                                <h3 class="pedido-titulo">Burguer 404</h3> 
-                                <h4 class="pedido-preco">R$ 24,90</h4>
-                                <p class="pedido-descricao">Pão de gergelim, cebola, alface, queijo cheddar, dois hambúrgueres de costela 180g...</p>
-                            </div>
-                            <div class="listaIngredientes">
-                                <div class="Ingrediente">
-                                    <span class="IngredienteNome">Pão</span>
-                                    <span class="IngredienteQuantidade">1x</span>
-                                    <button class="botaoAdiciona">+</button>
-                                    <button class="botaoRemove">-</button>
-                                </div>
-                                <div class="Ingrediente">
-                                    <span class="IngredienteNome">Queijo</span>
-                                    <span class="IngredienteQuantidade">1x</span>
-                                    <button class="botaoAdiciona">+</button>
-                                    <button class="botaoRemove">-</button>
-                                </div>
-                                <div class="Ingrediente">
-                                    <span class="IngredienteNome">Carne</span>
-                                    <span class="IngredienteQuantidade">1x</span>
-                                    <button class="botaoAdiciona">+</button>
-                                    <button class="botaoRemove">-</button>
-                                </div>
-                                <div class="Ingrediente">
-                                    <span class="IngredienteNome">Tomate</span>
-                                    <span class="IngredienteQuantidade">1x</span>
-                                    <button class="botaoAdiciona">+</button>
-                                    <button class="botaoRemove">-</button>
-                                </div>
-                                <div class="Ingrediente">
-                                    <span class="IngredienteNome">Alface</span>
-                                    <span class="IngredienteQuantidade">1x</span>
-                                    <button class="botaoAdiciona">+</button>
-                                    <button class="botaoRemove">-</button>
-                                </div>
-                            </div>
+                        <div class="carrinho-vazio" style="display: none;">
+                            <p class="carrinho-vazio-texto">Seu carrinho está vazio</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -312,14 +233,15 @@
             <div class="total">
                 <span>Total:</span>
             </div>
-            <div class="preco"> 
-                <span>R$ 0,00</span> 
+            <div class="preco">
+                <span>R$ 0,00</span>
             </div>
             <div class="ConteinerBtn">
                 <div class="NavBtn">
                     <a id="cancelar" href="@Url.Action("Index", "Home")">Cancelar</a>
                     <a id="botaoCarrinho" href="#" onclick="abrirModalCarrinho(); return false;"><img src="~/img/carrinhocom.png"></a>
-                    <a id="prosseguir" class="disabled" >Finalizar</a>
+                    <a id="cancelar" href="@Url.Action("RevisarPedido", "Home")">Prosseguir</a>
+                   
                 </div>
             </div>
         </div>
@@ -329,7 +251,7 @@
 <script src="~/js/modal.js" asp-append-version="true"></script>
 <script src="~/js/modalEdit.js" asp-append-version="true"></script>
 <script>
-function alternarConteudo(tipo) {
+function alternarConteudo(tipo, element) {
     // Esconde todos os conteúdos
     document.getElementById('conteudo-lanches').style.display = 'none';
     document.getElementById('conteudo-combos').style.display = 'none';
@@ -338,7 +260,8 @@ function alternarConteudo(tipo) {
     document.getElementById('conteudo-ofertas').style.display = 'none';
     document.getElementById('conteudo-bebidas').style.display = 'none';
     document.getElementById('conteudo-extras').style.display = 'none';
-    document.getElementById('conteudo-combos').style.display = 'none';
+
+    // Esconde todos os banners
     document.getElementById('banner-lanches').style.display = 'none';
     document.getElementById('banner-combos').style.display = 'none';
     document.getElementById('banner-sobremesas').style.display = 'none';
@@ -346,19 +269,18 @@ function alternarConteudo(tipo) {
     document.getElementById('banner-ofertas').style.display = 'none';
     document.getElementById('banner-bebidas').style.display = 'none';
     document.getElementById('banner-extras').style.display = 'none';
-    document.getElementById('banner-combos').style.display = 'none';
-    
+
     // Remove a classe active de todos os itens do menu
     document.querySelectorAll('.menu-item').forEach(item => {
         item.classList.remove('active');
     });
-    
-    // Mostra o conteúdo selecionado
+
+    // Mostra o conteúdo e o banner selecionado
     document.getElementById('conteudo-' + tipo).style.display = 'block';
     document.getElementById('banner-' + tipo).style.display = 'block';
-    
+
     // Adiciona a classe active ao item do menu clicado
-    event.currentTarget.classList.add('active');
+    element.classList.add('active');
 
     // Atualiza os filtros ativos (apenas se houver nav-categorias no conteúdo)
     var navCategorias = document.querySelector(`#conteudo-${tipo} .nav-categorias`);
@@ -370,6 +292,7 @@ function alternarConteudo(tipo) {
         if (firstLink) firstLink.classList.add('active');
     }
 }
+
 </script>
 </body>
 </html>

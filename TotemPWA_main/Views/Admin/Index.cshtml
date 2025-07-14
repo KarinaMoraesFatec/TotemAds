@@ -13,23 +13,8 @@
   <div class="container">
     <aside class="sidebar">
      <div class="logo">
-      <img src="/images/logo_crud.png" alt="">
+      <img src="/img/logo_crudd.png" alt="">
 </div>
-      <nav class="menu">
-        <h3>Home Crud</h3>
-        <ul>
-                <a asp-controller="Admin" asp-action="Index">
-                    <li><i class="fa-solid fa-house"></i> Início</li>
-                </a>
-                <a asp-controller="Category" asp-action="List">
-                    <li><i class="fa-solid fa-layer-group"></i> Categorias</li>
-                </a>
-                <a asp-controller="Product" asp-action="List">
-                    <li><i class="fa-solid fa-box-open"></i> Produtos</li>
-                </a>
-            
-            </ul>
-      </nav>
     </aside>
     <main class="main">
       <div class="main-card">
@@ -40,13 +25,13 @@
 
         <div class="cards">
           <div class="card red">
-            <h3><i class="fa-solid fa-list"></i> Ver Cardápio</h3>
+            <h3><i class="fa-solid fa-list"></i> Cardápio</h3>
             <p>Gerencie os produtos disponíveis no cardápio.</p>
             <a href="@Url.Action("Create", "Product")"><button class="btn-gradient">Adicionar Produto</button></a>
           </div>
 
           <div class="card orange">
-            <h3><i class="fa-solid fa-layer-group"></i> Ver Categorias</h3>
+            <h3><i class="fa-solid fa-layer-group"></i> Categorias</h3>
             <p>Gerencie as categorias de produtos.</p>
             <a href="@Url.Action("Create", "Category")"><button class="btn-gradient">Adicionar Categoria</button></a>
           </div>

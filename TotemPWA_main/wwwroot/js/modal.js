@@ -27,17 +27,19 @@ function fecharModalCarrinho() {
     }
 }
 
-// ✅ Atualiza o botão "Finalizar"
+// ✅ Atualiza o botão "Continuar"
 function atualizarBotaoFinalizar() {
     const botao = document.getElementById("prosseguir");
     if (!botao) return;
 
     if (carrinhoItens.length > 0) {
         botao.classList.remove("disabled");
-        botao.setAttribute("href", "/Home/Index");
+        // CORREÇÃO AQUI: Define o href para "Cupons" quando habilitado
+        botao.setAttribute("href", "/Home/Cupons"); 
     } else {
         botao.classList.add("disabled");
-        botao.setAttribute("href", "#");
+        // Define o href como '#' quando desabilitado para evitar navegação
+        botao.setAttribute("href", "#"); 
     }
 }
 
@@ -45,7 +47,7 @@ function atualizarBotaoFinalizar() {
 function atualizarCarrinho() {
     const carrinhoContainer = document.querySelector('.modal-content .modal-grid');
     const totalElement = document.querySelector('.barra-inferior .preco span');
-    const carrinhoVazio = document.querySelector('.carrinho-vazio');
+    let total = 0; // Inicializa o total aqui
 
     if (!carrinhoItens || carrinhoItens.length === 0) {
         if (carrinhoContainer) {
@@ -60,7 +62,6 @@ function atualizarCarrinho() {
         return;
     }
 
-    let total = 0;
     let htmlItens = '';
 
     carrinhoItens.forEach(item => {
@@ -71,7 +72,7 @@ function atualizarCarrinho() {
                     <img class="img-carrinho" src="${item.imagem}" alt="${item.nome}">
                     <div class="detalhes-item-carrinho">
                         <h3 class="carrinho-titulo-lanche">${item.nome}</h3>
-                        <p class="preco-item">R$ ${item.preco.toFixed(2)}</p>
+                        <p class="preco-item">R$ ${item.preco.toFixed(2).replace('.', ',')}</p>
                     </div>
                 </div>
                 <div class="controles-item">
@@ -87,22 +88,24 @@ function atualizarCarrinho() {
     });
 
     if (carrinhoContainer) carrinhoContainer.innerHTML = htmlItens;
-    if (totalElement) totalElement.textContent = `R$ ${total.toFixed(2)}`;
-    if (carrinhoVazio) carrinhoVazio.style.display = 'none';
+    if (totalElement) totalElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
 
     salvarCarrinho();
     atualizarBotaoFinalizar();
 }
 
 // Adicionar item ao carrinho
-function adicionarAoCarrinho(id, nome, preco, imagem) {
+function adicionarAoCarrinho(id, nome, preco, imagem, ingredientes = []) { // Adicionado ingredientes
     carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
     const itemExistente = carrinhoItens.find(item => item.id === id);
 
     if (itemExistente) {
         itemExistente.quantidade += 1;
+        // Se for um item que pode ter ingredientes customizados,
+        // você pode precisar de uma lógica mais sofisticada para agrupar ou duplicar.
+        // Por enquanto, apenas atualiza a quantidade.
     } else {
-        carrinhoItens.push({ id, nome, preco, imagem, quantidade: 1 });
+        carrinhoItens.push({ id, nome, preco, imagem, quantidade: 1, ingredientes });
     }
 
     salvarCarrinho();
@@ -136,6 +139,12 @@ function removerItemCarrinho(id) {
     }
 }
 
+    document.getElementById('cancelar').addEventListener('click', function(event) {
+    event.preventDefault();
+    fecharModalCarrinho(); // fecha o modal do carrinho
+    });
+
+
 // Remover item completo
 function removerTodoItem(id) {
     carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
@@ -153,8 +162,9 @@ function limparCarrinho() {
 
 // DOM carregado
 document.addEventListener('DOMContentLoaded', function () {
-    localStorage.removeItem('carrinhoItens');
-    carrinhoItens = [];
+    // IMPORTANTE: Se você não quer que o carrinho seja limpo a cada recarga, remova esta linha:
+    // localStorage.removeItem('carrinhoItens'); 
+    // carrinhoItens = []; // e esta também
 
     const fecharBtn = document.querySelector('.fechar-modal');
     if (fecharBtn) {
@@ -170,14 +180,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    document.querySelectorAll('.pedido-item').forEach(item => {
-        item.addEventListener('click', function () {
-            const id = parseInt(this.getAttribute('data-id'));
-            abrirModalEditar(this);
-        });
-    });
+    // Não é necessário adicionar listeners aqui, pois o modalEdit.js já chama abrirModalEditar
+    // document.querySelectorAll('.pedido-item').forEach(item => {
+    //     item.addEventListener('click', function () {
+    //         const id = parseInt(this.getAttribute('data-id'));
+    //         abrirModalEditar(this);
+    //     });
+    // });
 
-    atualizarCarrinho();
+    // Adiciona um listener para o botão "Continuar" para evitar navegação quando desabilitado
+  
+
+
+    atualizarCarrinho(); // Garante que o estado do carrinho e botão sejam carregados ao iniciar
     atualizarBotaoFinalizar();
 });
 
@@ -187,11 +202,11 @@ window.addEventListener('atualizarCarrinho', function () {
     atualizarCarrinho();
 });
 
-// Expor para escopo global
-window.abrirModalCarrinho = abrirModalCarrinho;
-window.fecharModalCarrinho = fecharModalCarrinho;
-window.adicionarAoCarrinho = adicionarAoCarrinho;
-window.adicionarItemCarrinho = adicionarItemCarrinho;
-window.removerItemCarrinho = removerItemCarrinho;
-window.removerTodoItem = removerTodoItem;
-window.limparCarrinho = limparCarrinho;
+// Expor para escopo global (já feito)
+// window.abrirModalCarrinho = abrirModalCarrinho;
+// window.fecharModalCarrinho = fecharModalCarrinho;
+// window.adicionarAoCarrinho = adicionarAoCarrinho;
+// window.adicionarItemCarrinho = adicionarItemCarrinho;
+// window.removerItemCarrinho = removerItemCarrinho;
+// window.removerTodoItem = removerTodoItem;
+// window.limparCarrinho = limparCarrinho;
